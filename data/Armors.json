@@ -1,0 +1,13 @@
+[
+null,
+{"id":1,"atypeId":5,"description":"盾牌 =  dùn pái ","etypeId":2,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":128,"name":"盾牌","note":"<Menu Category: 物品>\n<Info Text Top>\n盾牌 =  dùn pái\n</Info Text Top>\n <Weight: 50>\n <Can Discard>","params":[0,0,0,10,0,0,0,0],"price":100},
+{"id":2,"atypeId":1,"description":"帽子 = mào zǐ ","etypeId":3,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":130,"name":"帽子","note":"<Menu Category: 物品>\n<Info Text Top>\n帽子 = mào zǐ \n</Info Text Top>\n <Weight: 5>\n <Can Discard>","params":[0,0,0,10,0,0,0,0],"price":20},
+{"id":3,"atypeId":1,"description":"上衣 = shàng yī ","etypeId":4,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":135,"name":"上衣","note":"<Menu Category: 物品>\n<Info Text Top>\n上衣 = shàng yī \n</Info Text Top>\n <Weight: 15>\n <Can Discard>","params":[0,0,0,10,0,0,0,0],"price":20},
+{"id":4,"atypeId":1,"description":"截止 =  jié zhǐ ","etypeId":5,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":145,"name":"截止","note":"<Menu Category: 物品>\n<Info Text Top>\n截止 =  jié zhǐ \n</Info Text Top>\n <Weight: 2>\n <Can Discard>","params":[0,0,0,0,10,0,0,0],"price":15},
+{"id":5,"atypeId":0,"description":"裙子 = qún zǐ ","etypeId":4,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":154,"name":"裙子","note":"<Menu Category: 物品>\n<Info Text Top>\n裙子 = qún zǐ \n</Info Text Top>\n <Weight: 10>\n <Can Discard>","params":[0,0,0,10,0,0,0,0],"price":15},
+{"id":6,"atypeId":0,"description":"","etypeId":2,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0},
+{"id":7,"atypeId":0,"description":"","etypeId":2,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0},
+{"id":8,"atypeId":0,"description":"","etypeId":2,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0},
+{"id":9,"atypeId":0,"description":"","etypeId":2,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0},
+{"id":10,"atypeId":0,"description":"","etypeId":2,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0}
+]

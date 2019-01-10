@@ -1,0 +1,7 @@
+[
+null,
+{"id":1,"animationId":6,"description":"宝剑 =  bǎo jiàn ","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":97,"name":"宝剑","note":"<Menu Category: 物品>\n<Info Text Top>\n宝剑 =  bǎo jiàn \n</Info Text Top>\n <Weight: 40>\n <Can Discard>","params":[0,0,10,0,0,0,0,0],"price":150,"wtypeId":2},
+{"id":2,"animationId":6,"description":"斧头 =  fǔ tóu ","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":99,"name":"斧头","note":"<Menu Category: 物品>\n<Info Text Top>\n斧头 =  fǔ tóu \n</Info Text Top>\n <Weight: 35>\n <Can Discard>","params":[0,0,9,0,0,0,0,0],"price":125,"wtypeId":4},
+{"id":3,"animationId":0,"description":"","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0,"wtypeId":0},
+{"id":4,"animationId":11,"description":"","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":102,"name":"弓箭","note":"<Menu Category: 物品>\n<Info Text Top>\n弓箭 =  gōng jiàn\n</Info Text Top>\n <Weight: 25>\n <Can Discard>","params":[0,0,7,0,0,0,0,0],"price":100,"wtypeId":7}
+]
