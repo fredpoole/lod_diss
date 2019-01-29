@@ -224,32 +224,50 @@ Game_Switches.prototype.onChange = function() {
     Game_Switches.saveFile(this._data[$defaultSwitchId]);
 };
 
+StorageManager.saveToTestFile = function(fname, json) {
+    var fs = require('fs');
+    var path = require('path');
+
+    
+    var dirPath = this.localFileDirectoryPath();
+    var filePath = path.join(dirPath, fname);
+    
+    console.log(`dirPath = ${dirPath}`);
+    console.log(`Saving test file to '${filePath}'`);
+    console.log(json);
+
+    if (!fs.existsSync(dirPath)) {
+        fs.mkdirSync(dirPath);
+    }
+
+    fs.writeFileSync(filePath, json);
+}
+
 Game_Switches.saveFile = function(sw) {
     if($msaves > 0 && sw){
         console.log("Outputting file");
-        json = "";
-        $testing.forEach(function(element){
-            json += "{\n";
-           	json += "\t" + '"Map_id" : "' + element.id + '",\n';
-            json += "{\t" + '"Pathing" : ' + '[\n';
-            element.pathing.forEach(function(array){
-               if(element.pathing.indexOf(array) == element.pathing.length-1){
-                    json += "\t\t[" + '"' + array[0] + '"' + ", " + array[1] + ", " + array[2] + "," + array[3] + "]";
-               }
-                else json += "\t\t[" + '"' + array[0] + '"' + ", " + array[1] + ", " + array[2] + "," + array[3] + "],\n"; 
-            });
-            json += '\n\t]\n';
-            json += "}";
-            json += "\n";
+        json = [];
+        $testing.forEach(function(gameMap){
+
+            var data = {
+                Map_id: gameMap.id,
+                Pathing: []
+            };
+            
+            for (var pathData of gameMap.pathing) {
+                data.Pathing.push(pathData);
+            }
+
+            json.push(data);
         });
 
-        StorageManager.saveToTestFile(json); 
+        StorageManager.saveToTestFile("./test.json", JSON.stringify(json)); 
 
         $msaves--;
     }
 }
 
-Scene_GameEnd.prototype.commandToTitle = function() {    
+Scene_GameEnd.prototype.commandToTitle = function() {
     if($titlesave) Game_Switches.saveFile(true);  
     Scene_GameEnd.clearTrackInfo();  
     this.fadeOutAll();
