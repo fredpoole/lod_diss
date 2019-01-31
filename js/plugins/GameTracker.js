@@ -38,16 +38,12 @@ GameTracker.enabled = PluginManager.parameters("GameTracker")["Enable Tracking"]
  */
 var _Game_Player_increaseSteps = Game_Player.prototype.increaseSteps;
 Game_Player.prototype.increaseSteps = function() {
+    console.log("increaseSteps", this);
     _Game_Player_increaseSteps.call(this);
 
     // Make sure the character is moving on their own and tracking is turned on
-    if (!this.isMoveRouteForcing() && $dataMap.meta.Track) {
-        if (!($gameMap._mapId in GameTracker.pathing)) {
-            GameTracker.pathing[$gameMap._mapId] = []
-        }
-
-        var date = new Date().toISOString()
-        GameTracker.pathing[$gameMap._mapId].push([date, "Path", this._newX, this._newY])
+    if (!this.isMoveRouteForcing() && GameTracker.enabled) {
+        // do stuff
     }
 };
 
@@ -56,21 +52,25 @@ Game_Player.prototype.increaseSteps = function() {
  */
 var _Scene_Map_callMenu = Scene_Map.prototype.callMenu;
 Scene_Map.prototype.callMenu = function() {
+    console.log("callMenu", this);
     _Scene_Map_callMenu.call(this);
 };
 
 var _Scene_Menu_commandItem = Scene_Menu.prototype.commandItem;
 Scene_Menu.prototype.commandItem = function() {
+    console.log("commandItem", this);
     _Scene_Menu_commandItem.call(this);
 };
 
 var _Scene_Skill_createSkillTypeWindow = Scene_Skill.prototype.createSkillTypeWindow;
 Scene_Skill.prototype.createSkillTypeWindow = function() {
+    console.log("createSkillTypeWindow", this);
     _Scene_Skill_createSkillTypeWindow.call(this);
 };
 
 var _Scene_Status_create = Scene_Status.prototype.create;
 Scene_Status.prototype.create = function() {
+    console.log("Status", this);
     _Scene_Status_create.call(this);
 };
 
@@ -80,16 +80,19 @@ Scene_Status.prototype.create = function() {
  */
 var _Scene_ItemBase_useItem = Scene_ItemBase.prototype.useItem;
 Scene_ItemBase.prototype.useItem = function() {
+    console.log("useItem", this);
     _Scene_ItemBase_useItem.call(this);
 };
 
 var _Scene_ItemBase_showSubWindow = Scene_ItemBase.prototype.showSubWindow;
 Scene_ItemBase.prototype.showSubWindow = function(window) {
+    console.log("Pathing", this);
     _Scene_ItemBase_showSubWindow.call(this, window);
 };
 
 var _Scene_Equip_onItemOk = Scene_Equip.prototype.onItemOk;
 Scene_Equip.prototype.onItemOk = function() {
+    console.log("Pathing", this);
     _Scene_Equip_onItemOk.call(this);
 };
 
@@ -99,10 +102,20 @@ Scene_Equip.prototype.onItemOk = function() {
 var _Game_Player_startMapEvent = Game_Player.prototype.startMapEvent;
 Game_Player.prototype.startMapEvent = function(x, y, triggers, normal) {
     _Game_Player_startMapEvent.call(this, x, y, triggers, normal);
+
+    if (!$gameMap.isEventRunning()) {
+        $gameMap.eventsXy(x, y).forEach(function(event) {
+            if (event.isTriggerIn(triggers) && event.isNormalPriority() === normal) {
+                console.log("Pathing", this);
+            }
+        });
+    }
+
 };
 
 var _Scene_Map_onMapLoaded = Scene_Map.prototype.onMapLoaded;
 Scene_Map.prototype.onMapLoaded = function() {
+    console.log("Pathing", this);
     _Scene_Map_onMapLoaded.call(this);
 };
 
@@ -111,11 +124,13 @@ Scene_Map.prototype.onMapLoaded = function() {
  */
 var _BattleManager_setup = BattleManager.setup;
 BattleManager.setup = function(troopId, canEscape, canLose) {
+    console.log("BM setup", this);
     _BattleManager_setup.apply(this, troopId, canEscape, canLose);
 };
 
 var _BattleManager_endBattle = BattleManager.endBattle;
 BattleManager.endBattle = function(result) {
+    console.log("BM endBattle", this);
     _BattleManager_endBattle.apply(this, result);
 };
 
@@ -124,11 +139,13 @@ BattleManager.endBattle = function(result) {
  */
 var _Game_Message_allText = Game_Message.prototype.allText;
 Game_Message.prototype.allText = function() {
+    console.log("GameMessage_allText", this);
     return _Game_Message_allText.call(this);
 };
 
 var _Game_Message_onChoice = Game_Message.prototype.onChoice;
 Game_Message.prototype.onChoice = function(n) {
+    console.log("GameMessage_onChoice", this);
     _Game_Message_onChoice.call(this, n);
 };
 
@@ -137,11 +154,13 @@ Game_Message.prototype.onChoice = function(n) {
  */
 var _Game_Player_performTransfer = Game_Player.prototype.performTransfer;
 Game_Player.prototype.performTransfer = function() {
+    console.log("performTransfer", this);
     _Game_Player_performTransfer.call(this);
 };
 
 var _Game_Switches_onChange = Game_Switches.prototype.onChange;
 Game_Switches.prototype.onChange = function() {
+    console.log("Switches_onChange", this);
     _Game_Switches_onChange.call(this);
 };
 
@@ -150,6 +169,7 @@ Game_Switches.prototype.onChange = function() {
  */
 var _Scene_GameEnd_commandToTitle = Scene_GameEnd.prototype.commandToTitle;
 Scene_GameEnd.prototype.commandToTitle = function() {
+    console.log("GameEnd_commandToTitle", this);
     if ($titlesave) {
         Game_Switches.saveFile(true);
     }
@@ -158,28 +178,32 @@ Scene_GameEnd.prototype.commandToTitle = function() {
 };
 
 var _Scene_Gameover_gotoTitle = Scene_Gameover.prototype.gotoTitle;
-Scene_Gameover.prototype.gotoTitle = function() {   
+Scene_Gameover.prototype.gotoTitle = function() {  
+    console.log("GameOver_gotoTitle", this); 
     _Scene_Gameover_gotoTitle.call(this)
 };
 
 /**
  * Misc Events
  */
-StorageManager.saveToTestFile = function(fname, json) {
-    var fs = require('fs');
-    var path = require('path');
+var _StorageManager_save = StorageManager.save;
+StorageManager.save = function(savefileId, json) {
+    console.log("Pathing", this);
+    _StorageManager_save.apply(this, [savefileId, json])
+    // var fs = require('fs');
+    // var path = require('path');
 
-    var dirPath = this.localFileDirectoryPath();
-    var filePath = path.join(dirPath, fname);
+    // var dirPath = this.localFileDirectoryPath();
+    // var filePath = path.join(dirPath, fname);
     
-    console.log(`dirPath = ${dirPath}`);
-    console.log(`Saving test file to '${filePath}'`);
-    console.log(json);
+    // console.log(`dirPath = ${dirPath}`);
+    // console.log(`Saving test file to '${filePath}'`);
+    // console.log(json);
 
-    if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath);
-    }
+    // if (!fs.existsSync(dirPath)) {
+    //     fs.mkdirSync(dirPath);
+    // }
 
-    fs.writeFileSync(filePath, json);
+    // fs.writeFileSync(filePath, json);
 }
 
