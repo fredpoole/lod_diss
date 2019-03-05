@@ -36,6 +36,7 @@ $defaultSwitchId = Number(PluginManager.parameters("LudoSavePathing")["Default S
 $msaves = Number(PluginManager.parameters("LudoSavePathing")["Max Saves"]) || 1;
 $titlesave = (PluginManager.parameters("LudoSavePathing")["Save on Title Screen"] == "true");
 
+
 Scene_Map.prototype.onMapLoaded = function() {
     if (this._transfer) {
         $gamePlayer.performTransfer();
@@ -248,6 +249,18 @@ Game_Switches.saveFile = function(sw) {
         $msaves--;
     }
 }
+
+StorageManager.saveToTestFile = function(json) {
+    var fs = require('fs');
+    var dirPath = this.localFileDirectoryPath();
+    var ref = Number(PluginManager.parameters("LudoSavePathing")["Max Saves"]) - $msaves + 1;
+   	var playername =  $gameActors.actor(1).name();
+    var filePath = this.localFileDirectoryPath() + playername + ref + ".txt";
+    if (!fs.existsSync(dirPath)) {
+        fs.mkdirSync(dirPath);
+    }
+    fs.writeFileSync(filePath, json);
+};
 
 Scene_GameEnd.prototype.commandToTitle = function() {    
     if($titlesave) Game_Switches.saveFile(true);  
