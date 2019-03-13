@@ -66,12 +66,12 @@
 	
 	{
 	    "term":"战斗卡",
-        "description":"A collected 228 poems by three German scribes; \\c[4]Peter of Blois\\c[0], \\c[4]Walter of Chatillon\\c[0] and \\c[4]Archpoet\\c[0]."
+        "description":"zhàndòu kǎ"
     },
 	
 	{
 	    "term":"蝙蝠卡",
-        "description":"A maze of tunnels and tombs running underneath \\c[4]Paris\\c[0] made to hide Christian burials, now unruly with monsters."
+        "description":"biānfú kǎ"
     },
 	
 	{
@@ -81,27 +81,27 @@
 	
 	{
 	    "term":"物品卡",
-        "description":"The act of \\c[4]Channeling\\c[0]."
+        "description":"wùpǐn kǎ"
     },
 	
 	{
 	    "term":"树卡",
-        "description":"The process through which humans give mana to spirits and those spirits \\c[4]conjure\\c[0] up the requested magic in return."
+        "description":"shù kǎ"
     },
 	
 	{
 	    "term":"木头",
-        "description":"One of the more powerful aristocratic families in \\c[4]Paris\\c[0], with a long, well-respected lineage."
+        "description":"mùtóu"
     },
 	
 	{
-	    "term":"Charles the Mad",
-        "description":"A French aristocrat prone to lapses of insanity, who once believed he was made of grass."
+	    "term":"香蕉",
+        "description":"xiāngjiāo"
     },
 	
 	{
-	    "term":"Cheval Mallet",
-        "description":"An evil horse appearing before weary travellers.  Anyone who rode it was never heard from again."
+	    "term":"练习",
+        "description":"liànxí"
     },
 	
 	{
