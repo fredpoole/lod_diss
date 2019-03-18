@@ -9,31 +9,31 @@
  * @help Use <Track:true> on Map metadata to enable tracking.
  * @param Default SwitchId
  * @desc Number of the switch that will trigger the file output when turned on for the first time
- * 
+ *
  * Default : 20
  * @default 20
- * 
+ *
  * @param Max Saves
  * @desc Max number of Saves allowed per game
  * Default : 1
  * @default 1
- * 
+ *
  * @param Save on Title Screen
  * @desc Set to true to automatically save on title screen, false otherwise (lowercase true)
  * Default : true
  * @default true
- */   
- 
+ */
 
- //-----------------------------------------------------------------------------
 
- // Scene_Map_Pathing_Check
+//-----------------------------------------------------------------------------
+
+// Scene_Map_Pathing_Check
 //
-// 
+//
 
 $testing = [];
 $defaultSwitchId = Number(PluginManager.parameters("LudoSavePathing")["Default SwitchId"]) || 20;
-$msaves = Number(PluginManager.parameters("LudoSavePathing")["Max Saves"]) || 1;
+$msaves = Number(PluginManager.parameters("LudoSavePathing")["Max Saves"]) || 20;
 $titlesave = (PluginManager.parameters("LudoSavePathing")["Save on Title Screen"] == "true");
 
 
@@ -44,10 +44,17 @@ Scene_Map.prototype.onMapLoaded = function() {
     this.createDisplayObjects();
 };
 
+Scene_Title.prototype.commandContinue = function() {
+    this._commandWindow.close();
+    SceneManager.push(Scene_Load);
+
+};
+
 
 //=============================================================================
 // Collecting Pathing Information
 //=============================================================================
+
 Game_Player.prototype.increaseSteps = function() {
     Game_Character.prototype.increaseSteps.call(this);
     if (this.isNormal()) {
@@ -60,6 +67,7 @@ Game_Player.prototype.increaseSteps = function() {
 
 //=============================================================================
 // Menu Access
+//=============================================================================
 Scene_Map.prototype.callMenu = function() {
     SoundManager.playOk();
     SceneManager.push(Scene_Menu);
@@ -213,7 +221,7 @@ Game_Player.prototype.performTransfer = function() {
             }
             else Ludoexample[0].pathing.push([$gameSystem.playtimeText(), "Transfer", this._newX, this._newY]);
         }
-        
+
         this.refresh();
         this.clearTransferInfo();
     }
@@ -237,14 +245,14 @@ Game_Switches.saveFile = function(sw) {
                if(element.pathing.indexOf(array) == element.pathing.length-1){
                     json += "\t\t[" + '"' + array[0] + '"' + ", " + array[1] + ", " + array[2] + "," + array[3] + "]";
                }
-                else json += "\t\t[" + '"' + array[0] + '"' + ", " + array[1] + ", " + array[2] + "," + array[3] + "],\n"; 
+                else json += "\t\t[" + '"' + array[0] + '"' + ", " + array[1] + ", " + array[2] + "," + array[3] + "],\n";
             });
             json += '\n\t]\n';
             json += "}";
             json += "\n";
         });
 
-        StorageManager.saveToTestFile(json); 
+        StorageManager.saveToTestFile(json);
 
         $msaves--;
     }
@@ -257,25 +265,28 @@ StorageManager.saveToTestFile = function(json) {
    	var playername =  $gameActors.actor(1).name();
     var filePath = this.localFileDirectoryPath() + playername + ref + ".txt";
     if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath);
-    }
+      fs.mkdirSync(dirPath);
+}
     fs.writeFileSync(filePath, json);
+
+
 };
 
-Scene_GameEnd.prototype.commandToTitle = function() {    
-    if($titlesave) Game_Switches.saveFile(true);  
-    Scene_GameEnd.clearTrackInfo();  
+Scene_GameEnd.prototype.commandToTitle = function() {
+    if($titlesave) Game_Switches.saveFile(true);
+    Scene_GameEnd.clearTrackInfo();
     this.fadeOutAll();
     SceneManager.goto(Scene_Title);
 };
 
 Scene_Gameover.prototype.gotoTitle = function() {
-    if($titlesave) Game_Switches.saveFile(true);  
-    Scene_GameEndne.clearTrackInfo();      
+    if($titlesave) Game_Switches.saveFile(true);
+    Scene_GameEnd.clearTrackInfo();
     SceneManager.goto(Scene_Title);
 };
 
 Scene_GameEnd.clearTrackInfo = function(){
+    window.alert("Test, Test");
     for(var i of $testing){
         i.pathing = [];
     }
