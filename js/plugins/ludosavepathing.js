@@ -25,11 +25,13 @@
  */
 
 
- //-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 
- // Scene_Map_Pathing_Check
+// Scene_Map_Pathing_Check
 //
 //
+//
+
 
 $testing = [];
 $defaultSwitchId = Number(PluginManager.parameters("LudoSavePathing")["Default SwitchId"]) || 20;
@@ -69,9 +71,11 @@ Scene_Title.prototype.commandContinue = function() {
     $testing.filter(function(test){ return test.id === $gameMap._mapId })[0].pathing.push([$gameSystem.playtimeText(), "Continue", this._x, this._y]);
 };
 
+
 //=============================================================================
 // Collecting Pathing Information
 //=============================================================================
+
 Game_Player.prototype.increaseSteps = function() {
     Game_Character.prototype.increaseSteps.call(this);
     if (this.isNormal()) {
@@ -84,6 +88,7 @@ Game_Player.prototype.increaseSteps = function() {
 
 //=============================================================================
 // Menu Access
+//=============================================================================
 Scene_Map.prototype.callMenu = function() {
     SoundManager.playOk();
     SceneManager.push(Scene_Menu);
@@ -278,9 +283,11 @@ StorageManager.saveToTestFile = function(json) {
    	var playername =  $gameActors.actor(1).name();
     var filePath = this.localFileDirectoryPath() + playername + ref + ".txt";
     if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath);
-    }
+      fs.mkdirSync(dirPath);
+}
     fs.writeFileSync(filePath, json);
+
+
 };
 
 Scene_Menu.prototype.commandSave = function() {
@@ -304,6 +311,7 @@ Scene_Gameover.prototype.gotoTitle = function() {
 };
 */
 Scene_GameEnd.clearTrackInfo = function(){
+    window.alert("Test, Test");
     for(var i of $testing){
         i.pathing = [];
     }

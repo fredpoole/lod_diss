@@ -9,27 +9,27 @@
  * @help Use <Track:true> on Map metadata to enable tracking.
  * @param Default SwitchId
  * @desc Number of the switch that will trigger the file output when turned on for the first time
- * 
+ *
  * Default : 20
  * @default 20
- * 
+ *
  * @param Max Saves
  * @desc Max number of Saves allowed per game
  * Default : 1
  * @default 1
- * 
+ *
  * @param Save on Title Screen
  * @desc Set to true to automatically save on title screen, false otherwise (lowercase true)
  * Default : true
  * @default true
- */   
- 
+ */
+
 
  //-----------------------------------------------------------------------------
 
  // Scene_Map_Pathing_Check
 //
-// 
+//
 
 $testing = [];
 $defaultSwitchId = Number(PluginManager.parameters("LudoSavePathing")["Default SwitchId"]) || 20;
@@ -73,7 +73,7 @@ Game_Player.prototype.performTransfer = function() {
             }
             else Ludoexample[0].pathing.push([$gameSystem.playtimeText(), this._newX, this._newY]);
         }
-        
+
         this.refresh();
         this.clearTransferInfo();
     }
@@ -97,14 +97,14 @@ Game_Switches.saveFile = function(sw) {
                 if(element.pathing.indexOf(array) == element.pathing.length-1){
                     json += "\t\t[" + '"' + array[0] + '"' + ", " + array[1] + ", " + array[2] + "]";
                 }
-                else json += "\t\t[" + '"' + array[0] + '"' + ", " + array[1] + ", " + array[2] + "],\n"; 
+                else json += "\t\t[" + '"' + array[0] + '"' + ", " + array[1] + ", " + array[2] + "],\n";
             });
             json += '\n\t]\n';
             json += "}";
             json += "\n";
         });
 
-        StorageManager.saveToTestFile(json); 
+        StorageManager.saveToTestFile(json);
 
         $msaves--;
     }
@@ -121,16 +121,16 @@ StorageManager.saveToTestFile = function(json) {
     fs.writeFileSync(filePath, json);
 };
 
-Scene_GameEnd.prototype.commandToTitle = function() {    
-    if($titlesave) Game_Switches.saveFile(true);  
-    Scene_GameEnd.clearTrackInfo();  
+Scene_GameEnd.prototype.commandToTitle = function() {
+    if($titlesave) Game_Switches.saveFile(true);
+    Scene_GameEnd.clearTrackInfo();
     this.fadeOutAll();
     SceneManager.goto(Scene_Title);
 };
 
 Scene_Gameover.prototype.gotoTitle = function() {
-    if($titlesave) Game_Switches.saveFile(true);  
-    Scene_GameEndne.clearTrackInfo();      
+    if($titlesave) Game_Switches.saveFile(true);
+    Scene_GameEnd.clearTrackInfo();
     SceneManager.goto(Scene_Title);
 };
 
