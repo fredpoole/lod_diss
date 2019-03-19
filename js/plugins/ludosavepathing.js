@@ -9,33 +9,33 @@
  * @help Use <Track:true> on Map metadata to enable tracking.
  * @param Default SwitchId
  * @desc Number of the switch that will trigger the file output when turned on for the first time
- * 
+ *
  * Default : 20
  * @default 20
- * 
+ *
  * @param Max Saves
  * @desc Max number of Saves allowed per game
  * Default : 1
  * @default 1
- * 
+ *
  * @param Save on Title Screen
  * @desc Set to true to automatically save on title screen, false otherwise (lowercase true)
  * Default : true
  * @default true
- */   
- 
+ */
+
 
  //-----------------------------------------------------------------------------
 
  // Scene_Map_Pathing_Check
 //
-// 
+//
 
 $testing = [];
 $defaultSwitchId = Number(PluginManager.parameters("LudoSavePathing")["Default SwitchId"]) || 20;
-$msaves = Number(PluginManager.parameters("LudoSavePathing")["Max Saves"]) || 1;
+$msaves = Number(PluginManager.parameters("LudoSavePathing")["Max Saves"]) || 20;
 $titlesave = (PluginManager.parameters("LudoSavePathing")["Save on Title Screen"] == "true");
-
+$reload = (PluginManager.parameters("LudoSavePathing")["Reload"]=="true")
 
 Scene_Map.prototype.onMapLoaded = function() {
     if (this._transfer) {
@@ -44,6 +44,30 @@ Scene_Map.prototype.onMapLoaded = function() {
     this.createDisplayObjects();
 };
 
+Scene_Title.prototype.createCommandWindow = function() {
+    this._commandWindow = new Window_TitleCommand();
+    this._commandWindow.setHandler('newGame',  this.commandNewGame.bind(this));
+    this._commandWindow.setHandler('continue', this.commandContinue.bind(this));
+    this._commandWindow.setHandler('options',  this.commandOptions.bind(this));
+    this.addWindow(this._commandWindow);
+    var b = {
+          id : this._newMapId,
+          pathing : [[$gameSystem.playtimeText(), "Continue", $gameMap._mapId]],
+    }
+};
+
+
+Scene_Title.prototype.commandContinue = function() {
+    this._commandWindow.close();
+    SceneManager.push(Scene_Load);
+    if($reload)
+    $testing = DataManager.syncData($testing);
+  //  var b = {
+  //      id : this._newMapId,
+  //      pathing : [[$gameSystem.playtimeText(), "Continue", $gameMap._mapId]],
+  //  }
+    $testing.filter(function(test){ return test.id === $gameMap._mapId })[0].pathing.push([$gameSystem.playtimeText(), "Continue", this._x, this._y]);
+};
 
 //=============================================================================
 // Collecting Pathing Information
@@ -130,8 +154,6 @@ Scene_Equip.prototype.onItemOk = function() {
     $testing.filter(function(test){ return test.id === $gameMap._mapId })[0].pathing.push([$gameSystem.playtimeText(), "Equip_Item" ,this.item().name]);
 };
 
-
-
     //$testing.filter(function(test){ return test.id === $gameMap._mapId })[0].pathing.push([$gameSystem.playtimeText(), "Menu Off"]);
 
 //=============================================================================
@@ -213,12 +235,11 @@ Game_Player.prototype.performTransfer = function() {
             }
             else Ludoexample[0].pathing.push([$gameSystem.playtimeText(), "Transfer", this._newX, this._newY]);
         }
-        
+
         this.refresh();
         this.clearTransferInfo();
     }
 };
-
 
 Game_Switches.prototype.onChange = function() {
     $gameMap.requestRefresh();
@@ -237,14 +258,14 @@ Game_Switches.saveFile = function(sw) {
                if(element.pathing.indexOf(array) == element.pathing.length-1){
                     json += "\t\t[" + '"' + array[0] + '"' + ", " + array[1] + ", " + array[2] + "," + array[3] + "]";
                }
-                else json += "\t\t[" + '"' + array[0] + '"' + ", " + array[1] + ", " + array[2] + "," + array[3] + "],\n"; 
+                else json += "\t\t[" + '"' + array[0] + '"' + ", " + array[1] + ", " + array[2] + "," + array[3] + "],\n";
             });
             json += '\n\t]\n';
             json += "}";
             json += "\n";
         });
 
-        StorageManager.saveToTestFile(json); 
+        StorageManager.saveToTestFile(json);
 
         $msaves--;
     }
@@ -262,19 +283,26 @@ StorageManager.saveToTestFile = function(json) {
     fs.writeFileSync(filePath, json);
 };
 
-Scene_GameEnd.prototype.commandToTitle = function() {    
-    if($titlesave) Game_Switches.saveFile(true);  
-    Scene_GameEnd.clearTrackInfo();  
+Scene_Menu.prototype.commandSave = function() {
+    if($titlesave) Game_Switches.saveFile(true);
+    SceneManager.push(Scene_Save);
+    DataManager.saveSyncData($testing);
+};
+
+/**
+Scene_GameEnd.prototype.commandToTitle = function() {
+    if($titlesave) Game_Switches.saveFile(true);
+    Scene_GameEnd.clearTrackInfo();
     this.fadeOutAll();
     SceneManager.goto(Scene_Title);
 };
 
 Scene_Gameover.prototype.gotoTitle = function() {
-    if($titlesave) Game_Switches.saveFile(true);  
-    Scene_GameEndne.clearTrackInfo();      
+    if($titlesave) Game_Switches.saveFile(true);
+    Scene_GameEnd.clearTrackInfo();
     SceneManager.goto(Scene_Title);
 };
-
+*/
 Scene_GameEnd.clearTrackInfo = function(){
     for(var i of $testing){
         i.pathing = [];
