@@ -37,7 +37,6 @@ $testing = [];
 $defaultSwitchId = Number(PluginManager.parameters("LudoSavePathing")["Default SwitchId"]) || 20;
 $msaves = Number(PluginManager.parameters("LudoSavePathing")["Max Saves"]) || 20;
 $titlesave = (PluginManager.parameters("LudoSavePathing")["Save on Title Screen"] == "true");
-$reload = (PluginManager.parameters("LudoSavePathing")["Reload"]=="true")
 
 Scene_Map.prototype.onMapLoaded = function() {
     if (this._transfer) {
@@ -46,29 +45,9 @@ Scene_Map.prototype.onMapLoaded = function() {
     this.createDisplayObjects();
 };
 
-Scene_Title.prototype.createCommandWindow = function() {
-    this._commandWindow = new Window_TitleCommand();
-    this._commandWindow.setHandler('newGame',  this.commandNewGame.bind(this));
-    this._commandWindow.setHandler('continue', this.commandContinue.bind(this));
-    this._commandWindow.setHandler('options',  this.commandOptions.bind(this));
-    this.addWindow(this._commandWindow);
-    var b = {
-          id : this._newMapId,
-          pathing : [[$gameSystem.playtimeText(), "Continue", $gameMap._mapId]],
-    }
-};
-
-
-Scene_Title.prototype.commandContinue = function() {
-    this._commandWindow.close();
-    SceneManager.push(Scene_Load);
-    if($reload)
-    $testing = DataManager.syncData($testing);
-  //  var b = {
-  //      id : this._newMapId,
-  //      pathing : [[$gameSystem.playtimeText(), "Continue", $gameMap._mapId]],
-  //  }
-    $testing.filter(function(test){ return test.id === $gameMap._mapId })[0].pathing.push([$gameSystem.playtimeText(), "Continue", this._x, this._y]);
+Scene_Load.prototype.reloadMapIfUpdated = function() {
+	$gamePlayer.reserveTransfer($gameMap.mapId(), $gamePlayer.x, $gamePlayer.y);
+	$gamePlayer.requestMapReload();
 };
 
 
@@ -292,8 +271,8 @@ StorageManager.saveToTestFile = function(json) {
 
 Scene_Menu.prototype.commandSave = function() {
     if($titlesave) Game_Switches.saveFile(true);
+    Scene_GameEnd.clearTrackInfo();
     SceneManager.push(Scene_Save);
-    DataManager.saveSyncData($testing);
 };
 
 /**
@@ -311,7 +290,6 @@ Scene_Gameover.prototype.gotoTitle = function() {
 };
 */
 Scene_GameEnd.clearTrackInfo = function(){
-    window.alert("Test, Test");
     for(var i of $testing){
         i.pathing = [];
     }
