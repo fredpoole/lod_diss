@@ -266,7 +266,6 @@ StorageManager.saveToTestFile = function(json) {
 }
     fs.writeFileSync(filePath, json);
 
-
 };
 
 Scene_Menu.prototype.commandSave = function() {
