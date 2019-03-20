@@ -12,7 +12,7 @@ null,
 {"id":10,"expanded":false,"name":"Shanghai","order":16,"parentId":13,"scrollX":1198,"scrollY":875},
 {"id":11,"expanded":false,"name":"Xi'an","order":25,"parentId":13,"scrollX":1396.3636363636365,"scrollY":1910.7272727272727},
 {"id":12,"expanded":false,"name":"Chengdu","order":34,"parentId":13,"scrollX":1783.1999999999998,"scrollY":1303.2},
-{"id":13,"expanded":true,"name":"World_Experimental","order":1,"parentId":0,"scrollX":10052.4,"scrollY":4023.6},
+{"id":13,"expanded":true,"name":"World_Experimental","order":1,"parentId":0,"scrollX":10033.199999999999,"scrollY":4004.3999999999996},
 {"id":14,"expanded":false,"name":"House1","order":10,"parentId":9,"scrollX":1446.5454545454545,"scrollY":929.4545454545455},
 {"id":15,"expanded":false,"name":"House1","order":11,"parentId":9,"scrollX":1446.5454545454545,"scrollY":929.4545454545455},
 {"id":16,"expanded":false,"name":"House1","order":12,"parentId":9,"scrollX":1446.5454545454545,"scrollY":929.4545454545455},
@@ -78,5 +78,4 @@ null,
 {"id":76,"expanded":true,"name":"XianVillageRight","order":76,"parentId":13,"scrollX":1056.6666666666667,"scrollY":615.3333333333334},
 {"id":77,"expanded":false,"name":"Battle Testing Ground","order":77,"parentId":13,"scrollX":855.8181818181819,"scrollY":503.4545454545455},
 {"id":78,"expanded":false,"name":"CharSelectScreen","order":78,"parentId":0,"scrollX":1527.6,"scrollY":1095.6}
-
 ]
