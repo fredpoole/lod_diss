@@ -105,6 +105,7 @@ Scene_Status.prototype.create = function() {
     this.addWindow(this._statusWindow);
     $testing.filter(function(test){ return test.id === $gameMap._mapId })[0].pathing.push([$gameSystem.playtimeText(), "Status"]);
 };
+
 //=============================================================================
 // Timestamps for Using/selecting Items,armor,weapons
 //=============================================================================
@@ -153,6 +154,7 @@ Game_Player.prototype.startMapEvent = function(x, y, triggers, normal) {
         });
     }
 };
+
 //=============================================================================
 // Battle Start and Stop Times
 //=============================================================================

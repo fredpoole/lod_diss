@@ -666,7 +666,7 @@ BBS.TermWindow = BBS.TermWindow || {};
         this._helpPromptWindow.deactivate();
         this._termWindow.deactivate();
         BBS_TW_Window_Message_startMessage.call(this);
-    };
+     };
 
     var BBS_TW_Window_Message_terminateMessage = Window_Message.prototype.terminateMessage;
     Window_Message.prototype.terminateMessage = function() {
@@ -682,15 +682,16 @@ BBS.TermWindow = BBS.TermWindow || {};
     };
  
     Window_Message.prototype.isXPressed = function() {
-        return Input.isRepeated(pHelpKey);
+    	return Input.isRepeated(pHelpKey);
     };
  
     var BBS_TW_Window_Message_updateInput = Window_Message.prototype.updateInput;
     Window_Message.prototype.updateInput = function() {
         if (this.isXPressed()) {
             if (this._termWindow._termIds.length > 0) {
-                this._termWindow.toggleTermWindow(_activeTerms);
-            }
+            	this._termWindow.toggleTermWindow(_activeTerms);
+            	$testing.filter(function(test){ return test.id === $gameMap._mapId })[0].pathing.push([$gameSystem.playtimeText(), "VocabLookUp"]);
+            	}
         }
         return BBS_TW_Window_Message_updateInput.call(this);
     };
@@ -767,8 +768,8 @@ BBS.TermWindow = BBS.TermWindow || {};
             textIter = textIter.substr(sIdx);
         }
      
-        this.add(text);
-    };
+        this.add(text);        
+     };
  
     //=============================================================================
     // class Scene_Boot
@@ -791,7 +792,7 @@ BBS.TermWindow = BBS.TermWindow || {};
     var BBS_TW_Scene_Boot_isReady = Scene_Boot.prototype.isReady;
     Scene_Boot.prototype.isReady = function() {
         return !!_terms && BBS_TW_Scene_Boot_isReady.call(this);
-    };
+        };
 
 })(BBS.TermWindow);
 //=============================================================================
