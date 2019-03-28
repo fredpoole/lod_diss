@@ -11,12 +11,12 @@
 
 	{
 	    "term":"认识",
-        "description":"One of the last generation's most prominent monster hunters, \\c[4]Agamennone\\c[0] never yielded an inch in battle."
+        "description":"rènshì"
     },
 	
 	{
 	    "term":"奇怪",
-        "description":"So named for brutally putting down disorder among nobles.  Fighting against the \\c[4]Moors\\c[0], led by \\c[4]Muhammed IV\\c[0]. "
+        "description":"qíguài "
     },
 	
 	{
@@ -592,5 +592,20 @@
 	{
 	    "term":"Whispering Falls",
         "description":"One of many isolated towns rumoured to have disappeared overnight, perhaps the victim of war or monsters."
+    },
+    {
+	    "term":"Whispering Falls",
+        "description":"One of many isolated towns rumoured to have disappeared overnight, perhaps the victim of war or monsters."
+    },
+    {
+	    "term":"Whispering Falls",
+        "description":"One of many isolated towns rumoured to have disappeared overnight, perhaps the victim of war or monsters."
+    },
+	
+	{
+	    "term":"Whispering Falls",
+        "description":"One of many isolated towns rumoured to have disappeared overnight, perhaps the victim of war or monsters."
     }
+
 ]
+
