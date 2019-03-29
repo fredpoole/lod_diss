@@ -21,47 +21,47 @@
 	
 	{
 	    "term":"张伟",
-        "description":"A brew from the \\c[4]Valle dei Setti Morti\\c[0].  It has proven very popular, despite limited production."
+        "description":"zhāngwěi"
     },
 	
 	{
 	    "term":"近",
-        "description":"\\c[4]Amalia\\c[0] doubles as an adventuress.  Her charm and approachable nature earn her countless fans."
+        "description":"jìn"
     },
 	
 	{
 	    "term":"知道",
-        "description":"An imposing vessel, the \\c[4]Ame Morte\\c[0] is an impressive but oddly worn looking \\c[4]Galleon\\c[0]."
+        "description":"zhīdào"
     },
 
 	{
 	    "term":"找",
-        "description":"Aonghus hails from Scotland.  He uses hand-axes to brutal effect, and lost an eye clearing a \\c[4]Gap of Goeblin\\c[0]."
+        "description":"zhǎo"
     },
 	
 	{
 	    "term":"离开",
-        "description":"\\c[4]Venice\\c[0] is a ship-production power, with some of the world's finest fleet construction facilities - the \\c[4]Armoury\\c[0]."
+        "description":"líkāi"
     },
 	
 	{
 	    "term":"战斗",
-        "description":"Said to be part lion, elephant, boar, and bear, all attempts to slay the \\c[4]Behemoth\\c[0] have failed."
+        "description":"zhàndòu"
     },
 	
 	{
 	    "term":"打架",
-        "description":"A group of bandits led by an infamous thug named Bosque.  They've terrorized caravans near \\c[4]Toledo\\c[0] for years."
+        "description":"dǎjià"
     },
 
 	{
 	    "term":"对付",
-        "description":"A witch who once tried to take over England with an army of undead, birthed from her foul magic cauldron."
+        "description":"duìfù"
     },
 	
 	{
 	    "term":"准备",
-        "description":"The soup of \\c[4]Branwen\\c[0]'s Cauldron can bring the dying back to life, or resurrect the dead as soulless zombies."
+        "description":"zhǔnbèi"
     },
 	
 	{
@@ -106,127 +106,127 @@
 	
 	{
 	    "term":"布",
-        "description":"An unknown monster that seems to cause time distortions near itself."
+        "description":"bù"
     },
 	
 	{
 	    "term":"砂石",
-        "description":"Refers to \\c[4]Clement the Fifth\\c[0], \\c[4]Pope\\c[0] from 1305 - 1314.  Responsible for the \\c[4]Templar Purge\\c[0]."
+        "description":"shāshí"
     },
 	
 	{
-	    "term":"Clement the Fifth",
-        "description":"\\c[4]Pope\\c[0] from 1305 - 1314.  Responsible for the \\c[4]Templar Purge\\c[0].  Moved the \\c[4]Curia\\c[0] to \\c[4]Avignon\\c[0]."
+	    "term":"沈万三",
+        "description":"chénwànsān"
     },
 	
 	{
-	    "term":"Clock Tower",
-        "description":"An old clock tower towering over \\c[4]St. Mark's Square\\c[0], it would later be torn down."
+	    "term":"香料",
+        "description":"xiāngliào"
     },
 	
 	{
-	    "term":"Cape of Good Hope",
-        "description":"Near the southern tip of South Africa.  Many ships have fallen prey to fierce storms in the region."
+	    "term":"晚了",
+        "description":"wǎnle"
     },
 	
 	{
-	    "term":"Conjure",
-        "description":"The act of \\c[4]Conjuring\\c[0]."
+	    "term":"告诉",
+        "description":"gàosù"
     },
 		
 	{
-	    "term":"Conjuring",
-        "description":"The process through which spirits create and manipulate the elements, usually in response to \\c[4]Channeling\\c[0]."
+	    "term":"吃饭",
+        "description":"chīfàn"
     },
 	
 	{
-	    "term":"Cursed Ring",
-        "description":"There are a surprising number of tales of cursed rings, but what happens if the curse is broken?"
+	    "term":"幸运",
+        "description":"xìngyùn"
     },
 	
 	{
-	    "term":"Culebre",
-        "description":"A fire-breathing \\c[4]Wyrm\\c[0]-like creature, noted for its habit of hoarding food and treasures."
+	    "term":"龙骨",
+        "description":"lóng gǔ"
     },
 	
 	{
-	    "term":"Cutting Edge",
-        "description":"A blacksmith in \\c[4]Venice\\c[0]'s \\c[4]Armoury\\c[0] district, near the \\c[4]Monster Hunters Guild\\c[0]."
+	    "term":"本地人",
+        "description":"běndìrén"
     },
 	
 	{
-	    "term":"Davy Jones' Locker",
-        "description":"\\c[4]Davy Jones\\c[0] is a devil to sailors, one who drags them down to his locker - his troves at the bottom of the sea."
+	    "term":"好运",
+        "description":"hǎoyùn"
     },
 	
 	{
-	    "term":"De La Fleurs",
-        "description":"The \\c[4]De La Fleurs\\c[0] are new to wealth.  Their fame saw them rise from travelling bard to upper class."
+	    "term":"火锅",
+        "description":"huǒguō"
     },
 	
 	{
-	    "term":"Demon Exorcism",
-        "description":"The process where priests forcibly expel a demon possessing someone or something.  Vital to resist the darkness."
+	    "term":"不错",
+        "description":"bùcuò"
     },
 
 	{
-	    "term":"Desecrator",
-        "description":"A foul creature that feasts upon corpses.  Special care must be taken to bury the dead properly to avoid drawing its attention."
+	    "term":"记得",
+        "description":"jìdé"
     },
 
 	{
-	    "term":"Doge",
-        "description":"The chief magistrate of \\c[4]Venice\\c[0], essentially its ruler or king."
+	    "term":"朋友",
+        "description":"péngyǒu"
     },
 	
 	{
-	    "term":"Far East",
-        "description":"A Eurocentric term for East Asia; China, Japan, the Philippines, and so on."
+	    "term":"天气",
+        "description":"tiānqì"
     },
 	
 	{
-	    "term":"Galleon",
-        "description":"Impressive large warships, especially popular in Spain.  Built with multiple decks and masts."
+	    "term":"晴天",
+        "description":"qíngtiān"
     },
 	
 	{
-	    "term":"Garguiem",
-        "description":"A huge serpent drenched red in the gore of countless men and beasts.  The fiend can regenerate itself, but fears fire."
+	    "term":"下雨",
+        "description":"xiàyǔ"
     },
 	
 	{
-	    "term":"Germany",
-        "description":"So-named for convenience, the Germanic region didn't unify into the country \\c[4]Germany\\c[0] until 1871."
+	    "term":"阳光",
+        "description":"yángguāng"
     },
 	
 	{
-	    "term":"Giovanni Soranzo",
-        "description":"The 51st \\c[4]Doge\\c[0] of \\c[4]Venice\\c[0], he ascended to the role on July 13, 1312."
+	    "term":"从来",
+        "description":"cónglái"
     },
 	
 	{
-	    "term":"Golgotha",
-        "description":"The realm of the dead, in which Death rules undisputed.  Widespread, and split into numerous geographic zones."
+	    "term":"说话",
+        "description":"shuōhuà"
     },
 	
 	{
-	    "term":"Grim Reaper",
-        "description":"The manifestion of death, a \\c[4]Grim Reaper\\c[0] reaps souls like farmers reap wheat, scythe and all."
+	    "term":"箱子",
+        "description":"xiāngzi"
     },
 	
 	{
-	    "term":"Hacinas Festival",
-        "description":"A festival centering around the \\c[4]Tarasque\\c[0], in which hidden desires are brought out into the open for a night."
+	    "term":"可以",
+        "description":"kěyǐ"
     },
 	
 	{
-	    "term":"Hall of Legacies",
-        "description":"A hall in every \\c[4]Monster Hunter Guild\\c[0] branch dedicated to the remembrance of great and deceased members."
+	    "term":"没关系",
+        "description":"méiguānxì"
     },
 	
 	{
-	    "term":"Hibiki",
-        "description":"An oddly notorious assassin, who makes a game out of his hunt.  Talented enough to succeed despite the public eye on him."
+	    "term":"郑和",
+        "description":"zhènghé"
     },
 	
 	{
