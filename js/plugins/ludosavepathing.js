@@ -263,12 +263,31 @@ StorageManager.saveToTestFile = function(json) {
     var ref = Number(PluginManager.parameters("LudoSavePathing")["Max Saves"]) - $msaves + 1;
    	var playername =  $gameActors.actor(1).name();
     var filePath = this.localFileDirectoryPath() + playername + ref + ".txt";
+    var MongoClient = require('mongodb').MongoClient;
+    var url = "mongodb://localhost:27017/";
+
+    MongoClient.connect(url, function(err, db) {
+      if (err) throw err;
+      var dbo = db.db("mydb");
+      var myobj = {name: playername, data:json};
+      dbo.collection("gameData").insertOne(myobj, function(err, res) {
+        if (err) throw err;
+        console.log("1 document inserted");
+        db.close();
+  });
+});
+
     if (!fs.existsSync(dirPath)) {
       fs.mkdirSync(dirPath);
 }
     fs.writeFileSync(filePath, json);
 
 };
+
+
+
+
+
 
 Scene_Menu.prototype.commandSave = function() {
     if($titlesave) Game_Switches.saveFile(true);
