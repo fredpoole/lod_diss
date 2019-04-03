@@ -465,8 +465,8 @@
     },
 	
 	{
-	    "term":"找找",
-        "description":"zhǎozhǎo"
+	    "term":"附近",
+        "description":"fùjìn"
     },
 	
 	{
@@ -510,101 +510,238 @@
     },
 	
 	{
-	    "term":"The Crimson Whirlwind",
-        "description":"A Scottish berserker, bearing light armor and a two-handed axe.  His wild slashes create crimson sprays in battle."
+	    "term":"请问",
+        "description":"qǐngwèn"
     },
 	
 	{
-	    "term":"Tearlaidh the Giant",
-        "description":"Reaching an incredible 8 feet in height, Tearlaidh towered over his opponents.  Died gloriously slaying \\c[4]Amphisbaena\\c[0]."
+	    "term":"冒险",
+        "description":"màoxiǎn"
     },
 	
 	{
-	    "term":"Toledo",
-        "description":"An old city, with a long history of co-existence between \\c[4]Christians\\c[0], \\c[4]Muslims\\c[0], and \\c[4]Jews\\c[0].  Famous for \\c[4]Toledo Steel\\c[0]."
+	    "term":"事情",
+        "description":"shìqíng"
     },
 	
 	{
-	    "term":"Toledo Guard",
-        "description":"The \\c[4]Watch\\c[0] or guards responsible for keeping order in \\c[4]Toledo\\c[0]."
+	    "term":"地图",
+        "description":"dìtú"
     },
 	
 	{
-	    "term":"Toledo Steel",
-        "description":"A prized metal alloy first used by \\c[4]Hannibal\\c[0] and his armies.  Bends instead of snapping in half when put under great strain."
+	    "term":"饭店",
+        "description":"fàndiàn"
     },
 	
 	{
-	    "term":"Tommy-Knocker",
-        "description":"The ghosts of miners killed in cave-ins, tied to this world by regrets.  Disposition ranges from mischievious to malevolent."
+	    "term":"送来",
+        "description":"sònglái"
     },
 	
 	{
-	    "term":"Tommy-Knockers",
-        "description":"The ghosts of miners killed in cave-ins, tied to this world by regrets.  Disposition ranges from mischievious to malevolent."
+	    "term":"陵墓",
+        "description":"língmù"
     },
 	
 	{
-		"term":"Translyvania",
-		"description":"A small European country near Romania under the rule of the bloodthirsty \\c[4]Vlad the Impaler\\c[0]."
+		"term":"裂缝",
+		"description":"lièfèng"
 	},
 	
 	{
-	    "term":"Setti Valle Brewery",
-        "description":"A small but popular brewery based in the \\c[4]Valle dei Setti Morti\\c[0]."
+	    "term":"张衡",
+        "description":"zhānghéng"
     },
 	
 	{
-	    "term":"Valle dei Setti Morti",
-        "description":"A large marsh whose name means 'Valley of the Seven Dead,' after tales about undead slaughtering a large family."
+	    "term":"陌生人",
+        "description":"mòshēngrén"
     },
 	
 	{
-	    "term":"Vatican",
-        "description":"\\c[4]Vatican City\\c[0], a small city-state within \\c[4]Rome\\c[0] ruled by the \\c[4]Pope\\c[0].  Most famous for \\c[4]St. Peter's Basilica\\c[0]."
+	    "term":"帮助",
+        "description":"bāngzhù"
     },
 	
 	{
-	    "term":"Venice",
-        "description":"A bustling port-city located in \\c[4]Venetian Lagoon\\c[0], across 117 small islands interwoven by canals and bridges."
+	    "term":"地震仪",
+        "description":"dìzhènyí"
     },
 	
 	{
-	    "term":"Venetian",
-        "description":"One living in \\c[4]Venice\\c[0]."
+	    "term":"收集",
+        "description":"shōují"
     },
 	
 	{
-	    "term":"Venetian Guard",
-        "description":"The \\c[4]Watch\\c[0] or guards responsible for keeping order in \\c[4]Venice\\c[0]."
+	    "term":"磁铁",
+        "description":"cítiě"
     },
 	
 	{
-	    "term":"Waters Edge Pub",
-        "description":"A lively pub popular with artisans and civilians, located on the eastern side of \\c[4]Venice\\c[0]."
+	    "term":"下次",
+        "description":"xiàcì"
     },
 	
 	{
-	    "term":"Will-o-wisps",
-        "description":"Spirits of those who died in the swamps, notorious for either leading travelers to great fortune or to certain death."
+	    "term":"辣椒",
+        "description":"làjiāo"
     },
 	
 	{
-	    "term":"Whispering Falls",
-        "description":"One of many isolated towns rumoured to have disappeared overnight, perhaps the victim of war or monsters."
+	    "term":"拿",
+        "description":"ná"
     },
+    
     {
-	    "term":"Whispering Falls",
-        "description":"One of many isolated towns rumoured to have disappeared overnight, perhaps the victim of war or monsters."
+	    "term":"帮忙",
+        "description":"bāngmáng"
     },
+    
     {
-	    "term":"Whispering Falls",
-        "description":"One of many isolated towns rumoured to have disappeared overnight, perhaps the victim of war or monsters."
+	    "term":"八角",
+        "description":"bājiǎo"
+    },
+
+	{
+	    "term":"材料",
+        "description":"cáiliào"
     },
 	
 	{
-	    "term":"Whispering Falls",
-        "description":"One of many isolated towns rumoured to have disappeared overnight, perhaps the victim of war or monsters."
+	    "term":"大葱",
+        "description":"dàcōng"
+    },
+
+	{
+	    "term":"奖励",
+        "description":"jiǎnglì"
+    },
+
+	{
+	    "term":"赵尔宓",
+        "description":"zhàoěrmì"
+    },
+
+	{
+	    "term":"爬虫",
+        "description":"páchóng"
+    },
+
+	{
+	    "term":"宠物",
+        "description":"chǒngwù"
+    },
+
+	{
+	    "term":"地牢",
+        "description":"dìláo"
+    },
+
+    {
+	    "term":"龙血",
+        "description":"lóngxuè"
+    },
+
+	{
+	    "term":"慢走",
+        "description":"mànzǒu"
+    },
+
+	{
+	    "term":"海鸟",
+        "description":"hǎiniǎo"
+    },
+
+	{
+	    "term":"老鼠",
+        "description":"lǎoshǔ"
+    },
+
+	{
+	    "term":"找到",
+        "description":"zhǎodào"
+    },
+
+	{
+	    "term":"目的",
+        "description":"mùdì"
+    },
+
+	{
+	    "term":"自便",
+        "description":"zìbiàn"
+    },
+
+	{
+	    "term":"永远",
+        "description":"yǒngyuǎn"
+    },
+	
+	{
+	    "term":"一定",
+        "description":"yídìng"
+    },
+	
+	{
+	    "term":"治病",
+        "description":"zhìbìng"
+    },
+    
+	{
+	    "term":"船",
+        "description":"chuán"
+    },
+    
+	{
+	    "term":"罗盘",
+        "description":"luópán"
+    },
+    
+	{
+	    "term":"迷路",
+        "description":"mílù"
+    },
+    
+	{
+	    "term":"小偷",
+        "description":"xiǎotōu"
+    },
+    
+	{
+	    "term":"航海",
+        "description":"hánghǎi"
+    },
+    
+	{
+	    "term":"许诺",
+        "description":"xǔnuò"
+    },
+    
+	{
+	    "term":"冷",
+        "description":"lěng"
+    },
+    
+	{
+	    "term":"怕",
+        "description":"pà"
+    },
+    
+	{
+	    "term":"啊啊啊啊啊啊啊",
+        "description":"嘻嘻嘻嘻嘻"
+    },
+    
+	{
+	    "term":"啊啊啊啊啊啊啊",
+        "description":"嘻嘻嘻嘻嘻"
+    },
+    
+	{
+	    "term":"啊啊啊啊啊啊啊",
+        "description":"嘻嘻嘻嘻嘻"
     }
 
 ]
