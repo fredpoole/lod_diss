@@ -720,25 +720,65 @@
     },
     
 	{
-	    "term":"冷",
-        "description":"lěng"
-    },
-    
-	{
 	    "term":"怕",
         "description":"pà"
     },
     
 	{
-	    "term":"啊啊啊啊啊啊啊",
-        "description":"嘻嘻嘻嘻嘻"
+	    "term":"讨厌",
+        "description":"tǎoyàn"
     },
     
+	{
+	    "term":"东北",
+        "description":"dōngběi"
+    },
+    
+	{
+	    "term":"东门",
+        "description":"dōngmén"
+    },
+
+	{
+	    "term":"北边",
+        "description":"běibiān"
+    },
+
 	{
 	    "term":"啊啊啊啊啊啊啊",
         "description":"嘻嘻嘻嘻嘻"
     },
-    
+
+	{
+	    "term":"啊啊啊啊啊啊啊",
+        "description":"嘻嘻嘻嘻嘻"
+    },
+
+	{
+	    "term":"啊啊啊啊啊啊啊",
+        "description":"嘻嘻嘻嘻嘻"
+    },
+
+	{
+	    "term":"啊啊啊啊啊啊啊",
+        "description":"嘻嘻嘻嘻嘻"
+    },
+
+	{
+	    "term":"啊啊啊啊啊啊啊",
+        "description":"嘻嘻嘻嘻嘻"
+    },
+
+	{
+	    "term":"啊啊啊啊啊啊啊",
+        "description":"嘻嘻嘻嘻嘻"
+    },
+
+	{
+	    "term":"啊啊啊啊啊啊啊",
+        "description":"嘻嘻嘻嘻嘻"
+    },
+
 	{
 	    "term":"啊啊啊啊啊啊啊",
         "description":"嘻嘻嘻嘻嘻"
