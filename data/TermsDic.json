@@ -745,18 +745,43 @@
     },
 
 	{
-	    "term":"啊啊啊啊啊啊啊",
-        "description":"嘻嘻嘻嘻嘻"
+	    "term":"可爱",
+        "description":"kěài"
     },
 
 	{
-	    "term":"啊啊啊啊啊啊啊",
-        "description":"嘻嘻嘻嘻嘻"
+	    "term":"以后",
+        "description":"yǐhòu"
     },
 
 	{
-	    "term":"啊啊啊啊啊啊啊",
-        "description":"嘻嘻嘻嘻嘻"
+	    "term":"花",
+        "description":"huā"
+    },
+
+	{
+	    "term":"小麦",
+        "description":"xiǎomài"
+    },
+
+	{
+	    "term":"白菜",
+        "description":"báicài"
+    },
+
+	{
+	    "term":"树",
+        "description":"shù"
+    },
+
+	{
+	    "term":"石头",
+        "description":"shítóu"
+    },
+
+	{
+	    "term":"砂石",
+        "description":"shāshí"
     },
 
 	{
