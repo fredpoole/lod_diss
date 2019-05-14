@@ -48,6 +48,11 @@
 	    "term":"战斗",
         "description":"zhàndòu"
     },
+
+    {
+	    "term":"摘",
+        "description":"zhāi"
+    },
 	
 	{
 	    "term":"打架",
@@ -854,21 +859,147 @@
     },
 
 	{
+	    "term":"拜拜",
+        "description":"bàibài"
+    },
+
+	{
+	    "term":"物品",
+        "description":"wùpǐn"
+    },
+
+	{
+	    "term":"线",
+        "description":"xiàn"
+    },
+
+	{
+	    "term":"得到",
+        "description":"dédào"
+    },
+
+    {
+	    "term":"收到",
+        "description":"shōudào"
+    },
+
+    {
+	    "term":"努力",
+        "description":"nǔlì"
+    },
+
+    {
+	    "term":"棉花卡",
+        "description":"miánhuākǎ"
+    },
+
+      {
+	    "term":"棉花",
+        "description":"miánhuā"
+    },
+
+
+    {
+	    "term":"砂石卡",
+        "description":"shāshíkǎ"
+    },
+
+    {
+	    "term":"快",
+        "description":"kuài"
+    },
+
+    {
+	    "term":"忙",
+        "description":"máng"
+    },
+
+    {
+	    "term":"猪",
+        "description":"zhū"
+    },
+
+    {
+	    "term":"抓",
+        "description":"zhuā"
+    },
+
+    {
+	    "term":"兔子",
+        "description":"tùzi"
+    },
+
+    {
+	    "term":"小鸡",
+        "description":"xiǎojī"
+    },
+
+    {
+	    "term":"最后",
+        "description":"zuìhòu"
+    },
+
+    {
+	    "term":"武器",
+        "description":"wǔqì"
+    },
+
+    {
+	    "term":"宝剑",
+        "description":"bǎojiàn"
+    },
+
+    {
+	    "term":"问题",
+        "description":"wèntí"
+    },
+
+    {
+	    "term":"墓碑",
+        "description":"mùbēi"
+    },
+
+    {
+	    "term":"坟墓",
+        "description":"fénmù"
+    },
+
+   {
+	    "term":"从",
+        "description":"cóng"
+    },
+
+       {
+	    "term":"聪明",
+        "description":"cōngmíng"
+    },
+
+       {
+	    "term":"差",
+        "description":"chà"
+    },
+
+       {
+	    "term":"推",
+        "description":"tuī"
+    },
+
+       {
 	    "term":"啊啊啊啊啊啊啊",
         "description":"嘻嘻嘻嘻嘻"
     },
 
-	{
+       {
 	    "term":"啊啊啊啊啊啊啊",
         "description":"嘻嘻嘻嘻嘻"
     },
 
-	{
+       {
 	    "term":"啊啊啊啊啊啊啊",
         "description":"嘻嘻嘻嘻嘻"
     },
 
-	{
+    {
 	    "term":"啊啊啊啊啊啊啊",
         "description":"嘻嘻嘻嘻嘻"
     }
