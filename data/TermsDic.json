@@ -1150,37 +1150,117 @@
     },
 
     {
-	    "term":"啊啊啊啊啊啊啊",
+	    "term":"危险",
         "description":"嘻嘻嘻嘻嘻"
     },
 
     {
-	    "term":"啊啊啊啊啊啊啊",
+	    "term":"做",
         "description":"嘻嘻嘻嘻嘻"
     },
 
     {
-	    "term":"啊啊啊啊啊啊啊",
+	    "term":"必须",
         "description":"嘻嘻嘻嘻嘻"
     },
 
     {
-	    "term":"啊啊啊啊啊啊啊",
+	    "term":"害怕",
         "description":"嘻嘻嘻嘻嘻"
     },
 
     {
-	    "term":"啊啊啊啊啊啊啊",
+	    "term":"改变",
         "description":"嘻嘻嘻嘻嘻"
     },
 
     {
-	    "term":"啊啊啊啊啊啊啊",
+	    "term":"聊天",
         "description":"嘻嘻嘻嘻嘻"
     },
 
+		{
+			"term":"打开",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"打败",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"啊啊啊啊",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"啊啊啊啊",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"啊啊啊啊",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"啊啊啊啊",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"啊啊啊啊",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"啊啊啊啊",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"啊啊啊啊",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"啊啊啊啊",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"啊啊啊啊",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"啊啊啊啊",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"啊啊啊啊",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"啊啊啊啊",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"啊啊啊啊",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"啊啊啊啊",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
     {
-	    "term":"啊啊啊啊啊啊啊",
+	    "term":"雕塑家",
         "description":"嘻嘻嘻嘻嘻"
     }
 
