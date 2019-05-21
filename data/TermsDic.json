@@ -639,11 +639,6 @@
         "description":"chǒngwù"
     },
 
-	{
-	    "term":"地牢",
-        "description":"dìláo"
-    },
-
     {
 	    "term":"龙血",
         "description":"lóngxuè"
@@ -1304,15 +1299,6 @@
 				"description":"嘻嘻嘻嘻嘻"
 		},
 
-		{
-			"term":"不错",
-				"description":"嘻嘻嘻嘻嘻"
-		},
-
-		{
-			"term":"快点",
-				"description":"嘻嘻嘻嘻嘻"
-		},
 
 		{
 			"term":"终于",
