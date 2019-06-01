@@ -1185,11 +1185,6 @@
 		},
 
 		{
-			"term":"箱子",
-				"description":"嘻嘻嘻嘻嘻"
-		},
-
-		{
 			"term":"跑走",
 				"description":"嘻嘻嘻嘻嘻"
 		},
@@ -1367,22 +1362,23 @@
 		},
 
 		{
+
+			"term":"统治世界",
+			"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"药水",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
+			"term":"变成",
+				"description":"嘻嘻嘻嘻嘻"
+		},
+
+		{
 			"term":"司马迁",
-				"description":"嘻嘻嘻嘻嘻"
-		},
-
-		{
-			"term":"啊啊啊啊",
-				"description":"嘻嘻嘻嘻嘻"
-		},
-
-		{
-			"term":"啊啊啊啊",
-				"description":"嘻嘻嘻嘻嘻"
-		},
-
-		{
-			"term":"啊啊啊啊",
 				"description":"嘻嘻嘻嘻嘻"
 		},
 
