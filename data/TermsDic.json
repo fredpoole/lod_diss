@@ -1383,20 +1383,23 @@
 		},
 
 		{
-			"term":"啊啊啊啊",
+			"term":"攻击",
 				"description":"嘻嘻嘻嘻嘻"
 		},
 
 		{
-			"term":"啊啊啊啊",
+			"term":"防守",
 				"description":"嘻嘻嘻嘻嘻"
 		},
 
 		{
-			"term":"啊啊啊啊",
+			"term":"药水",
 				"description":"嘻嘻嘻嘻嘻"
 		},
-
+		{
+			"term":"召唤",
+				"description":"嘻嘻嘻嘻嘻"
+		},
 
     {
 	    "term":"雕塑家",
