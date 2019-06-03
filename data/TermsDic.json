@@ -1116,259 +1116,259 @@
 
     {
 	    "term":"小丑",
-        "description":"嘻嘻嘻嘻嘻"
+        "description":"xiǎochǒu"
     },
 
     {
 	    "term":"公鸡",
-        "description":"嘻嘻嘻嘻嘻"
+        "description":"gōngjī"
     },
 
     {
 	    "term":"其实",
-        "description":"嘻嘻嘻嘻嘻"
+        "description":"qíshí"
     },
 
     {
 	    "term":"天文学家",
-        "description":"嘻嘻嘻嘻嘻"
+        "description":"tiānwénxuéjiā"
     },
 
     {
 	    "term":"兵马俑",
-        "description":"嘻嘻嘻嘻嘻"
+        "description":"bīngmǎyǒng"
     },
 
     {
 	    "term":"如果",
-        "description":"嘻嘻嘻嘻嘻"
+        "description":"rúguǒ"
     },
 
     {
 	    "term":"危险",
-        "description":"嘻嘻嘻嘻嘻"
+        "description":"wēixiǎn"
     },
 
     {
 	    "term":"做",
-        "description":"嘻嘻嘻嘻嘻"
+        "description":"zuò"
     },
 
     {
 	    "term":"必须",
-        "description":"嘻嘻嘻嘻嘻"
+        "description":"bìxū"
     },
 
     {
 	    "term":"害怕",
-        "description":"嘻嘻嘻嘻嘻"
+        "description":"hàipà"
     },
 
     {
 	    "term":"改变",
-        "description":"嘻嘻嘻嘻嘻"
+        "description":"gǎibiàn"
     },
 
     {
 	    "term":"聊天",
-        "description":"嘻嘻嘻嘻嘻"
+        "description":"liáotiān"
     },
 
 		{
 			"term":"打开",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"dǎkāi"
 		},
 
 		{
 			"term":"打败",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"dǎbài"
 		},
 
 		{
 			"term":"跑走",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"pǎozǒu"
 		},
 
 		{
 			"term":"腿",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"tuǐ"
 		},
 
 		{
 			"term":"目的地",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"mùdi de"
 		},
 
 		{
 			"term":"指引",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"zhǐyǐn"
 		},
 
 		{
 			"term":"帐篷",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"zhàngpéng"
 		},
 
 		{
 			"term":"勇敢",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"yǒnggǎn"
 		},
 
 		{
 			"term":"旅途",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"lǚtú"
 		},
 
 		{
 			"term":"玫瑰花",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"méiguīhuā"
 		},
 
 		{
 			"term":"船",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"chuán"
 		},
 
 		{
 			"term":"指南针",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"zhǐnánzhēn"
 		},
 
 		{
 			"term":"四合院",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"sìhéyuàn"
 		},
 
 		{
 			"term":"郑和",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"zhènghé"
 		},
 
 		{
 			"term":"队长",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"duìzhǎng"
 		},
 
 		{
 			"term":"墙",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"qiáng"
 		},
 
 		{
 			"term":"钥匙",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"yàoshi"
 		},
 
 		{
 			"term":"兄弟",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"xiōngdì"
 		},
 
 		{
 			"term":"骗",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"piàn"
 		},
 
 		{
 			"term":"答应",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"dáyīng"
 		},
 
 		{
 			"term":"地牢",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"dìláo"
 		},
 
 		{
 			"term":"怪物",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"guàiwù"
 		},
 
 		{
 			"term":"骗人",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"piànrén"
 		},
 
 		{
 			"term":"快点",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"kuàidiǎn"
 		},
 
 
 		{
 			"term":"终于",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"zhōngyú"
 		},
 
 		{
 			"term":"外边",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"wàibiān"
 		},
 
 		{
 			"term":"国旗",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"guóqí"
 		},
 
 		{
 			"term":"实验室",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"shíyànshì"
 		},
 
 		{
 			"term":"镇子",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"zhènzi"
 		},
 
 		{
 			"term":"雪球",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"xuěqiú"
 		},
 
 		{
 			"term":"进",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"jìn"
 		},
 
 		{
 			"term":"救",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"jiù"
 		},
 
 		{
 			"term":"地震",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"dìzhèn"
 		},
 
 		{
 			"term":"出去",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"chūqù"
 		},
 
 
         {
 			"term":"坏人",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"huàirén"
 		},
 
 		{
 			"term":"驯服",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"xúnfú"
 		},
 
 		{
 			"term":"应该",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"yīnggāi"
 		},
 
 		{
 			"term":"统治世界",
-				"description":"嘻嘻嘻嘻嘻"
+			"description":"tǒngzhìshìjiè"
 		},
 
 		{
 			"term":"药水",
-				"description":"嘻嘻嘻嘻嘻"
+				"description":"yàoshuǐ"
 		},
 
 		{
@@ -1377,29 +1377,75 @@
 		},
 
 		{
-			"term":"啊啊啊啊",
-				"description":"嘻嘻嘻嘻嘻"
+			"term":"司马迁",
+				"description":"biànchéng"
 		},
 
 		{
-			"term":"啊啊啊啊",
-				"description":"嘻嘻嘻嘻嘻"
+			"term":"攻击",
+				"description":"gōngjī"
 		},
 
 		{
-			"term":"啊啊啊啊",
-				"description":"嘻嘻嘻嘻嘻"
+			"term":"防守",
+				"description":"fángshǒu"
 		},
 
 		{
-			"term":"啊啊啊啊",
-				"description":"嘻嘻嘻嘻嘻"
+			"term":"召唤",
+				"description":"zhàohuàn"
 		},
-
-
+		{
+			"term":"test",
+				"description":"test"
+		},
+		{
+			"term":"test",
+				"description":"test"
+		},
+		{
+			"term":"test",
+				"description":"test"
+		},
+		{
+			"term":"test",
+				"description":"test"
+		},
+		{
+			"term":"test",
+				"description":"test"
+		},
+		{
+			"term":"test",
+				"description":"test"
+		},
+		{
+			"term":"test",
+				"description":"test"
+		},
+		{
+			"term":"test",
+				"description":"test"
+		},
+		{
+			"term":"test",
+				"description":"test"
+		},
+		{
+			"term":"test",
+				"description":"test"
+		},
+		{
+			"term":"test",
+				"description":"test"
+		},
+		{
+			"term":"test",
+				"description":"test"
+		},
     {
 	    "term":"雕塑家",
-        "description":"嘻嘻嘻嘻嘻"
+        "description":"diāosùjiā"
     }
 
 ]
