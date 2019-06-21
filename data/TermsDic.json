@@ -1421,19 +1421,19 @@
 		},
 		{
 			"term":"test",
+				"description":"cài"
+		},
+		{
+			"term":"菜",
 				"description":"test"
 		},
 		{
-			"term":"test",
-				"description":"test"
+			"term":"衣服",
+				"description":"yīfú"
 		},
 		{
-			"term":"test",
-				"description":"test"
-		},
-		{
-			"term":"test",
-				"description":"test"
+			"term":"锁住",
+				"description":"suǒzhù"
 		},
 		{
 			"term":"test",
