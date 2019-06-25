@@ -127,6 +127,8 @@ Scene_ItemBase.prototype.showSubWindow = function(window) {
     $testing.filter(function(test){ return test.id === $gameMap._mapId })[0].pathing.push([$gameSystem.playtimeText(), "Select_Item" ,this.item().name]);
 };
 
+/**
+IF I ADD THIS I GET AN ERROR WHEN EQUIPPING STUFF
 
 Scene_Equip.prototype.onItemOk = function() {
     SoundManager.playEquip();
@@ -138,7 +140,7 @@ Scene_Equip.prototype.onItemOk = function() {
     this._statusWindow.refresh();
     $testing.filter(function(test){ return test.id === $gameMap._mapId })[0].pathing.push([$gameSystem.playtimeText(), "Equip_Item" ,this.item().name]);
 };
-
+*/
     //$testing.filter(function(test){ return test.id === $gameMap._mapId })[0].pathing.push([$gameSystem.playtimeText(), "Menu Off"]);
 
 //=============================================================================
@@ -283,10 +285,6 @@ StorageManager.saveToTestFile = function(json) {
     fs.writeFileSync(filePath, json);
 
 };
-
-
-
-
 
 
 Scene_Menu.prototype.commandSave = function() {
