@@ -32,7 +32,6 @@
 //
 //
 
-
 $testing = [];
 $defaultSwitchId = Number(PluginManager.parameters("LudoSavePathing")["Default SwitchId"]) || 20;
 $msaves = Number(PluginManager.parameters("LudoSavePathing")["Max Saves"]) || 20;
@@ -265,6 +264,8 @@ StorageManager.saveToTestFile = function(json) {
     var ref = Number(PluginManager.parameters("LudoSavePathing")["Max Saves"]) - $msaves + 1;
    	var playername =  $gameActors.actor(1).name();
     var filePath = this.localFileDirectoryPath() + playername + ref + ".txt";
+//Set up Mongo --disable temporarily
+
     var MongoClient = require('mongodb').MongoClient;
     var url = "mongodb://localhost:27017/";
 
@@ -278,7 +279,6 @@ StorageManager.saveToTestFile = function(json) {
         db.close();
   });
 });
-
     if (!fs.existsSync(dirPath)) {
       fs.mkdirSync(dirPath);
 }
@@ -293,7 +293,7 @@ Scene_Menu.prototype.commandSave = function() {
     SceneManager.push(Scene_Save);
 };
 
-/**
+/*
 Scene_GameEnd.prototype.commandToTitle = function() {
     if($titlesave) Game_Switches.saveFile(true);
     Scene_GameEnd.clearTrackInfo();

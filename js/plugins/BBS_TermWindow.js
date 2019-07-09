@@ -184,67 +184,67 @@ BBS.TermWindow = BBS.TermWindow || {};
 
     var _terms;
     var _activeTerms = [];
- 
+
     //=============================================================================
     // Parameter Variables
     //=============================================================================
     var parameters                     = PluginManager.parameters('BBS_TermWindow');
     var pTermFile                    = String(parameters['Term File'] || 'data/TermsDic.json');
     var pTermColorIndex                = Number(parameters['Term Color Index'] || 4);
- 
+
     var pHelpKey                    = String(parameters['Help Key'] || 'pageup');
     var pPreviousTermKey            = String(parameters['Previous Term Key'] || 'left');
     var pNextTermKey                = String(parameters['Next Term Key'] || 'right');
- 
+
     var pMsgHelpPromptText            = String(parameters['Help Prompt'] || '');
     var pMsgHelpPromptBufferX         = Number(parameters['Help Prompt Buffer X'] || -28);
     var pMsgHelpPromptBufferY         = Number(parameters['Help Prompt Buffer Y'] || 0);
     var pMsgHelpPromptBufferWidth    = Number(parameters['Help Prompt Width'] || 200);
     var pMsgHelpPromptTextColor        = String(parameters['Help Prompt Text Color'] || '').trim();
     var pMsgHelpPromptTextSz        = Number(parameters['Help Prompt Text Size'] || 20);
- 
+
     var pCustomTermWindowskin        = String(parameters['Term Window Windowskin'] || '');
     var pTermWindowWidth            = Number(parameters['Term Window Width'] || 200);
     var pTermWindowHeight            = Number(parameters['Term Window Height'] || 300);
- 
+
     var pTitleTxtFont                = String(parameters['Title Font'] || '').trim();
     var pTitleTxtSz                 = Number(parameters['Title Size'] || 22);
     var pTitleTxtColor                = String(parameters['Title Color'] || '').trim();
     var pTitleTxtOutlineColor        = String(parameters['Title Outline Color'] || '').trim();
     var pTitleTxtItalic             = eval(String(parameters['Title Italic'] || 'false'));
- 
+
     var pGradientLineColorCenter     = String(parameters['Line Center Color'] || 'rgba(255,255,255,1)').trim();
     var pGradientLineColorBorder     = String(parameters['Line Border Color'] || 'rgba(255,255,255,0)').trim();
 
     var pDetailsTxtFont                = String(parameters['Text Font'] || '').trim();
     var pDetailsTxtFontSz            = Number(parameters['Text Size'] || 20);
     var pDetailsTxtOutlineColor        = String(parameters['Text Outline Color'] || '').trim();
- 
+
     var pDebugging                    = eval(String(parameters['Debug Mode'] || 'false'));
- 
+
     var BBS_helpPromptWnd = undefined;
     var BBS_termWnd = undefined;
- 
+
     // Sanity check for valid color index.
     if (pTermColorIndex < 0 || pTermColorIndex > 28) {
         throw "BBS_TermWindow: Term color index " + pTermColorIndex + " is not a valid color!  Please use an index between 0 - 28 inclusive.";
     }
- 
+
     //=============================================================================
     // Term Class
-    //============================================================================= 
+    //=============================================================================
     function Term() {
         this.initialize.apply(this, arguments);
     };
- 
+
     Term.prototype.initialize = function(data) {
         this._term = String(data.term);
         this._desc = String(data.description);
     };
- 
+
     Term.prototype = Object.create(Term.prototype);
     Term.prototype.constructor = Term;
- 
+
     /**
      * Creates rumors from the given data and loads their current state, afterwards.
      */
@@ -254,29 +254,29 @@ BBS.TermWindow = BBS.TermWindow || {};
             entry = data[i];
             temp.push(new Term(entry));
         }
-     
+
         _terms = temp;
-     
+
         if (pDebugging) {
             console.log(_terms);
         }
     };
- 
+
     var _getIndex = function(term) {
         if (pDebugging) {
             console.log(term);
             console.log(_terms);
         }
-     
+
         for(var i = 0; i < _terms.length; i++) {
             if(_terms[i]._term === term) {
                 return i;
             }
         }
-     
+
         return -1;
     };
- 
+
     //=============================================================================
     // Window_MsgHelpPrompt
     //=============================================================================
@@ -294,7 +294,7 @@ BBS.TermWindow = BBS.TermWindow || {};
         this._openness = 0;
         this._closeCounter = 0;
         this.deactivate();
-     
+
         this.backOpacity = 0;
         this.opacity = 0;
         this.hide();
@@ -307,7 +307,7 @@ BBS.TermWindow = BBS.TermWindow || {};
         var width = dw + eval(pMsgHelpPromptBufferWidth);
         return Math.ceil(width);
     };
- 
+
     Window_MsgHelpPrompt.prototype.textWidthEx = function(text) {
         return this.drawTextEx(text, 0, this.contents.height);
     };
@@ -346,15 +346,15 @@ BBS.TermWindow = BBS.TermWindow || {};
         this.createContents();
         this.contents.clear();
         this.resetFontSettings();
-     
+
         this.changeTextColor(this.textColor(pMsgHelpPromptTextColor));
         var padding = eval(pMsgHelpPromptBufferWidth) / 2;
         this.contents.fontSize = pMsgHelpPromptTextSz;
-     
+
         this.drawTextEx(this._text, padding, 0, this.contents.width);
         this._parentWindow.adjustWindowSettings();
         this._parentWindow.updatePlacement();
-     
+
         this.adjustPositionX();
         this.adjustPositionY();
         this.open();
@@ -405,12 +405,12 @@ BBS.TermWindow = BBS.TermWindow || {};
          this.y = this._parentWindow.y + this._parentWindow.height;
          this.y -= eval(pMsgHelpPromptBufferY);
         }
-     
+
     };
- 
+
     Window_MsgHelpPrompt.prototype.showPrompt = function() {
         if (this === undefined) { return; }
-     
+
         this.visible = !this.visible;
         if(this.active) {
             this.deactivate();
@@ -420,7 +420,7 @@ BBS.TermWindow = BBS.TermWindow || {};
         }
     };
 
- 
+
     //=============================================================================
     // Window_MsgTerm
     //=============================================================================
@@ -439,34 +439,34 @@ BBS.TermWindow = BBS.TermWindow || {};
         var y = Graphics.boxHeight - height - 164;
 
         this._wordWrap = true;
-     
+
         Window_Base.prototype.initialize.call(this, x, y, width, height);
         if (pCustomTermWindowskin !== '') {
             this.windowskin = ImageManager.loadSystem(pCustomTermWindowskin);
         }
-     
+
         this._title = '';
         this._text = '';
         this.index = 0;
-     
+
         this._termIds = [];
-     
+
         this.active = false;
         this.visible = false;
     };
 
-    Window_MsgTerm.prototype.setDetails = function() { 
+    Window_MsgTerm.prototype.setDetails = function() {
         if (this._termIds === undefined || this.index < 0) {
             this._title = '';
             this._text = '';
             this.refresh();
         }
         else {
-         
+
             // Handle odd case where index does not reset.
             if(this.index >= this._termIds.length) {
                 this.index = 0;
-             
+
                 // Odd bug where lengths and term values are not synced.
                 if(this._termIds[0] === -1) {
                     this._title = '';
@@ -474,13 +474,13 @@ BBS.TermWindow = BBS.TermWindow || {};
                     this.refresh();
                 }
             }
-         
+
             var termIndex = this._termIds[this.index];
             // Handle odd case where termIds desync - resulting in a term Id with a bad ID.
             if (termIndex < 0) {
                 termIndex = this._termIds[0];
             }
-         
+
             if (_terms[termIndex] === undefined) {
                 throw "Bad Term index: " + termIndex + "!  There's an error in the last or next message box's terms.";
             }
@@ -498,18 +498,18 @@ BBS.TermWindow = BBS.TermWindow || {};
     Window_MsgTerm.prototype.setActiveTerm = function(nextTerm, terms) {
         this._termIds = [];
         this._termIds = terms;
-     
+
         for(var i = 0; i < this._termIds.length; i++) {
             this._termIds[i] = _getIndex(terms[i]);
         }
-     
+
         if (pDebugging) {
             console.log(this._termIds);
             console.log(_activeTerms);
         }
-     
+
         this.setDetails();
-     
+
     };
 
     // Redefine the minimum number of functions to allow this non-command window to bind input handlers.
@@ -526,10 +526,10 @@ BBS.TermWindow = BBS.TermWindow || {};
             this._handlers[symbol]();
         }
     };
- 
+
     Window_MsgTerm.prototype.update = function() {
         Window_Base.prototype.update.call(this);
-     
+
         this.processCursorMove();
         this._stayCount++;
     };
@@ -552,10 +552,10 @@ BBS.TermWindow = BBS.TermWindow || {};
         if(this._termIds.length <= 1) {
             return;
         }
-     
+
         this.index = this.index + pageChange;
         SoundManager.playCursor();
-     
+
         // Cycle over to locked entry before reiterating through sub-entries.
         if (this.index >= this._termIds.length) {
             this.index = 0;
@@ -573,42 +573,42 @@ BBS.TermWindow = BBS.TermWindow || {};
         var contentsW = this.width - this.textPadding() - this.standardPadding() * 2;
         var contentsX = this.textPadding();
         var y = 2;
-     
+
         //Title
         this.resetFontSettings();
         this.contents.fontSize = pTitleTxtSz;
         this.contents.fontItalic = pTitleTxtItalic;
         if(pTitleTxtFont !== '') {
-            this.contents.fontFace = pTitleTxtFont; 
+            this.contents.fontFace = pTitleTxtFont;
         }
         if(pTitleTxtColor !== '') {
-            this.contents.textColor = pTitleTxtColor; 
+            this.contents.textColor = pTitleTxtColor;
         }
         if(pTitleTxtOutlineColor !== '') {
             this.contents.outlineColor = pTitleTxtOutlineColor;
         }
         this.drawText(this._title, contentsX, y, contentsW, 'center');
-     
+
         //GradientLine
         y += this.lineHeight() + 10;
         this.drawGradientLine(y, contentsW);
         y += 10;
-         
+
         //text
         this.resetFontSettings();
         if(pDetailsTxtFont !== '') {
-            this.contents.fontFace = pDetailsTxtFont; 
+            this.contents.fontFace = pDetailsTxtFont;
         }
         if(pDetailsTxtOutlineColor !== '') {
             this.contents.outlineColor = pDetailsTxtOutlineColor;
         }
-     
+
         this.contents.fontSize = pDetailsTxtFontSz;
         this.saveCurrentWindowSettings();
         this.drawTextEx(this._text, 0, y);
         this.restoreCurrentWindowSettings();
     };
- 
+
     Window_MsgTerm.prototype.standardFontSize = function() {
         return pDetailsTxtFontSz;
     };
@@ -617,23 +617,23 @@ BBS.TermWindow = BBS.TermWindow || {};
         var ctx = this.contents.context;
         var lw = w * 2/3;
         var lx = (w - w * 2/3)/2;
-     
+
         var lineargradient1 = ctx.createLinearGradient(lx,0,w/2,0);
         lineargradient1.addColorStop(0, pGradientLineColorBorder);
         lineargradient1.addColorStop(1, pGradientLineColorCenter);
         ctx.fillStyle = lineargradient1;
         ctx.fillRect(lx, y, lw/2, 2);
-     
+
         var lineargradient2 = ctx.createLinearGradient(w/2,0,lx+lw,0);
         lineargradient2.addColorStop(0, pGradientLineColorCenter);
         lineargradient2.addColorStop(1, pGradientLineColorBorder);
         ctx.fillStyle = lineargradient2;
         ctx.fillRect(w/2, y, lw/2, 2);
     };
- 
+
     Window_MsgTerm.prototype.toggleTermWindow = function(terms) {
         if (this === undefined) { return; }
-     
+
         this.visible = !this.visible;
         if(this.active) {
             this.deactivate();
@@ -643,7 +643,7 @@ BBS.TermWindow = BBS.TermWindow || {};
             this.activate();
         }
     };
- 
+
     //=============================================================================
     // Window_Message
     //=============================================================================
@@ -654,13 +654,13 @@ BBS.TermWindow = BBS.TermWindow || {};
         this._termWindow = new Window_MsgTerm(this);
         BBS_helpPromptWnd = this._helpPromptWindow;
         BBS_termWnd = this._termWindow;
-     
+
         var scene = SceneManager._scene;
         scene.addChild(this._helpPromptWindow);
         scene.addChild(this._termWindow);
         _hasTerms = false;
     };
- 
+
     var BBS_TW_Window_Message_startMessage = Window_Message.prototype.startMessage;
     Window_Message.prototype.startMessage = function() {
         this._helpPromptWindow.deactivate();
@@ -672,19 +672,19 @@ BBS.TermWindow = BBS.TermWindow || {};
     Window_Message.prototype.terminateMessage = function() {
         this._helpPromptWindow.deactivate();
         this._termWindow.deactivate();
-     
+
         this._helpPromptWindow.visible = false;
         this._termWindow.visible = false;
         this._termWindow._termIds = [];
         _hasTerms = false;
-     
+
         BBS_TW_Window_Message_terminateMessage.call(this);
     };
- 
+
     Window_Message.prototype.isXPressed = function() {
     	return Input.isRepeated(pHelpKey);
     };
- 
+
     var BBS_TW_Window_Message_updateInput = Window_Message.prototype.updateInput;
     Window_Message.prototype.updateInput = function() {
         if (this.isXPressed()) {
@@ -695,16 +695,16 @@ BBS.TermWindow = BBS.TermWindow || {};
         }
         return BBS_TW_Window_Message_updateInput.call(this);
     };
- 
+
     var BBS_TW_Window_Message_newPage = Window_Message.prototype.newPage;
     Window_Message.prototype.newPage = function(textState) {
         BBS_TW_Window_Message_newPage.call(this, textState);
-     
+
         if (pDebugging) {
             console.log(_activeTerms);
             console.log(_hasTerms);
         }
-     
+
         if(_hasTerms) {
             BBS_termWnd.setActiveTerm(_activeTerms[0], _activeTerms);
             BBS_helpPromptWnd.refresh(pMsgHelpPromptText, 4);
@@ -712,20 +712,20 @@ BBS.TermWindow = BBS.TermWindow || {};
             _hasTerms = false;
         }
     };
- 
+
     //=============================================================================
     // class Game_Message
-    //============================================================================= 
+    //=============================================================================
     Game_Message.prototype.addText = function(text) {
         // Don't override YEP.
         if ($gameSystem.wordWrap()) text = '<WordWrap>' + text;
-         
+
         var termPrefix = "c[" + pTermColorIndex + "]";
         console.log(termPrefix);
-     
+
         var termPostfix = "c[0]";
         var textIter = text;
-         
+
         var sIdx = 1;
         var fIdx = -1;
         while(sIdx >= 0) {
@@ -736,18 +736,18 @@ BBS.TermWindow = BBS.TermWindow || {};
             else {
                 break;
             }
-             
+
             fIdx = textIter.indexOf(termPostfix) - 1;
             if(fIdx < 0) {
                 fIdx = text.length - 1;
             }
-             
+
             if(pDebugging) {
                 console.log(fIdx);
                 console.log(termPostfix.length);
                 console.log(textIter.length);
             }
-         
+
             // We have a term if we got this far, so process it.
             var termStr = textIter.substr(sIdx, (fIdx - sIdx));
             var alreadyAdded = false;
@@ -758,19 +758,19 @@ BBS.TermWindow = BBS.TermWindow || {};
                     break;
                 }
             }
-         
+
             if(alreadyAdded === false) {
                 _activeTerms.push(termStr);
                 _hasTerms = true;
             }
-         
+
             // Advance to avoid infinite loop over same term tag.
             textIter = textIter.substr(sIdx);
         }
-     
-        this.add(text);        
+
+        this.add(text);
      };
- 
+
     //=============================================================================
     // class Scene_Boot
     //=============================================================================
@@ -779,7 +779,7 @@ BBS.TermWindow = BBS.TermWindow || {};
         BBS_TW_Scene_Boot_create.call(this);
         this._loadFile(pTermFile, _create);
     };
- 
+
     Scene_Boot.prototype._loadFile = function(url, callback) {
         var request = new XMLHttpRequest();
         request.open('GET', url);
@@ -788,7 +788,7 @@ BBS.TermWindow = BBS.TermWindow || {};
         request.onerror = function() { throw new Error('There was an error loading the file ' + url); }
         request.send();
     };
- 
+
     var BBS_TW_Scene_Boot_isReady = Scene_Boot.prototype.isReady;
     Scene_Boot.prototype.isReady = function() {
         return !!_terms && BBS_TW_Scene_Boot_isReady.call(this);
