@@ -1,7 +1,7 @@
 [
 null,
 {"id":1,"expanded":false,"name":"TopLeftHouse","order":3,"parentId":9,"scrollX":1184.3999999999999,"scrollY":797.4},
-{"id":2,"expanded":false,"name":"Beijing","order":29,"parentId":86,"scrollX":1424.5714285714284,"scrollY":1525.7142857142856},
+{"id":2,"expanded":false,"name":"Beijing","order":29,"parentId":86,"scrollX":966.75,"scrollY":744.75},
 {"id":3,"expanded":true,"name":"StartRoom","order":30,"parentId":2,"scrollX":1937.142857142857,"scrollY":1525.7142857142856},
 {"id":4,"expanded":false,"name":"House2","order":32,"parentId":2,"scrollX":1224,"scrollY":1217.3333333333333},
 {"id":5,"expanded":false,"name":"House1","order":31,"parentId":2,"scrollX":1224,"scrollY":1217.3333333333333},

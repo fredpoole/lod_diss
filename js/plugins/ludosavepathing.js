@@ -263,22 +263,24 @@ StorageManager.saveToTestFile = function(json) {
     var dirPath = this.localFileDirectoryPath();
     var ref = Number(PluginManager.parameters("LudoSavePathing")["Max Saves"]) - $msaves + 1;
    	var playername =  $gameActors.actor(1).name();
+    var date = new Date();
     var filePath = this.localFileDirectoryPath() + playername + ref + ".txt";
+
 //Set up Mongo --disable temporarily
-
-    var MongoClient = require('mongodb').MongoClient;
-    var url = "mongodb://localhost:27017/";
-
-    MongoClient.connect(url, function(err, db) {
-      if (err) throw err;
-      var dbo = db.db("mydb");
-      var myobj = {name: playername, data:json};
-      dbo.collection("gameData").insertOne(myobj, function(err, res) {
-        if (err) throw err;
-        console.log("1 document inserted");
-        db.close();
-  });
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://frdbrick:Othree34!@cluster0-ybnci.mongodb.net/test?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("mygameDB").collection("playerData");
+  var myobj = {name: playername,date:date, data:json};
+  collection.insertOne(myobj,function(err,res){
+    if (err)throw err;
+    console.log("1 doc inserted");
+    });
+  // perform actions on the collection object
+  client.close();
 });
+
     if (!fs.existsSync(dirPath)) {
       fs.mkdirSync(dirPath);
 }
