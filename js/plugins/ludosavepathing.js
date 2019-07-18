@@ -259,14 +259,28 @@ Game_Switches.saveFile = function(sw) {
 }
 
 StorageManager.saveToTestFile = function(json) {
-    var fs = require('fs');
-    var dirPath = this.localFileDirectoryPath();
-    var ref = Number(PluginManager.parameters("LudoSavePathing")["Max Saves"]) - $msaves + 1;
+  //  var fs = require('fs');
+  //  var dirPath = this.localFileDirectoryPath();
+  //  var ref = Number(PluginManager.parameters("LudoSavePathing")["Max Saves"]) - $msaves + 1;
    	var playername =  $gameActors.actor(1).name();
     var date = new Date();
-    var filePath = this.localFileDirectoryPath() + playername + ref + ".txt";
+  //  var filePath = this.localFileDirectoryPath() + playername + ref + ".txt";
 
-//Set up Mongo --disable temporarily
+	const stitchApp = Stitch.initializeDefaultAppClient("lodstitch-soldo");
+	const mongodb = stitchApp.getServiceClient(RemoteMongoClient.factory, "mongodb-atlas");
+	const itemsCollection = mongodb.db("mygameDB").collection("playerData");
+
+	const newItem = {
+  	"name": playername,
+  	"date": date,
+  	"data": json,
+  	};
+
+   itemsCollection.insertOne(newItem)
+  .then(result => console.log(`Successfully inserted item with _id: ${result.insertedId}`))
+  .catch(err => console.error(`Failed to insert item: ${err}`))
+
+/*
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://frdbrick:Othree34!@cluster0-ybnci.mongodb.net/test?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true });
@@ -280,11 +294,12 @@ client.connect(err => {
   // perform actions on the collection object
   client.close();
 });
+*/
 
-    if (!fs.existsSync(dirPath)) {
-      fs.mkdirSync(dirPath);
-}
-    fs.writeFileSync(filePath, json);
+//    if (!fs.existsSync(dirPath)) {
+//      fs.mkdirSync(dirPath);
+//}
+//    fs.writeFileSync(filePath, json);
 
 };
 
