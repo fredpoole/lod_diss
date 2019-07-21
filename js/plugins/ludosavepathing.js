@@ -265,7 +265,11 @@ StorageManager.saveToTestFile = function(json) {
    	var playername =  $gameActors.actor(1).name();
     var date = new Date();
   //  var filePath = this.localFileDirectoryPath() + playername + ref + ".txt";
-
+  const client = Stitch.defaultAppClient;
+  client.callFunction("sum", [3, 4]).then(result => {
+      console.log(result) // Output: 7
+  });
+/*
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://frdbrick:Othree34!@cluster0-ybnci.mongodb.net/test?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true });
@@ -279,7 +283,7 @@ client.connect(err => {
   // perform actions on the collection object
   client.close();
 });
-
+*/
 //    if (!fs.existsSync(dirPath)) {
 //      fs.mkdirSync(dirPath);
 //}
