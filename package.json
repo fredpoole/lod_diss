@@ -8,5 +8,8 @@
         "width": 816,
         "height": 624,
         "icon": "icon/icon.png"
+    },
+    "dependencies": {
+        "mongodb-stitch-browser-sdk": "^4.5.0"
     }
 }
