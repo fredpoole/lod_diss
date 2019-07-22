@@ -261,39 +261,13 @@ Game_Switches.saveFile = function(sw) {
 
 
 StorageManager.saveToTestFile = function(json) {
-  //  var fs = require('fs');
-  //  var dirPath = this.localFileDirectoryPath();
-  //  var ref = Number(PluginManager.parameters("LudoSavePathing")["Max Saves"]) - $msaves + 1;
+    var fs = require('fs');
+    var dirPath = this.localFileDirectoryPath();
+    var ref = Number(PluginManager.parameters("LudoSavePathing")["Max Saves"]) - $msaves + 1;
    	var playername =  $gameActors.actor(1).name();
     var date = new Date();
-  //  var filePath = this.localFileDirectoryPath() + playername + ref + ".txt";
-  const {
-      Stitch,
-      RemoteMongoClient,
-      AnonymousCredential
-  } = require('mongodb-stitch-browser-sdk');
+    var filePath = this.localFileDirectoryPath() + playername + ref + ".txt";
 
-  const client = Stitch.initializeDefaultAppClient('lodstitch-soldo');
-  const db = client.getServiceClient(RemoteMongoClient.factory, 'mongodb-atlas').db('mygameDB');
-  client.auth.loginWithCredential(new AnonymousCredential()).then(user =>
-    db.collection('playerData').updateOne({owner_id: client.auth.user.id}, {$set:{number:42}}, {upsert:true})
-  ).then(() =>
-    db.collection('playerData').find({owner_id: client.auth.user.id}, { limit: 100}).asArray()
-  ).then(docs => {
-      console.log("Found docs", docs)
-      console.log("[MongoDB Stitch] Connected to Stitch")
-      client.callFunction("insertData").then(result => {
-          console.log("inserted data") // Output: 7
-      })
-  }).catch(err => {
-      console.error(err)
-  });
-
-
-
-
-
-/*
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://frdbrick:Othree34!@cluster0-ybnci.mongodb.net/test?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true });
@@ -307,11 +281,11 @@ client.connect(err => {
   // perform actions on the collection object
   client.close();
 });
-*/
-//    if (!fs.existsSync(dirPath)) {
-//      fs.mkdirSync(dirPath);
-//}
-//    fs.writeFileSync(filePath, json);
+
+    if (!fs.existsSync(dirPath)) {
+      fs.mkdirSync(dirPath);
+}
+    fs.writeFileSync(filePath, json);
 
 };
 
