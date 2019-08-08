@@ -1420,12 +1420,12 @@
 				"description":"lóushàng"
 		},
 		{
-			"term":"test",
-				"description":"cài"
+			"term":"金",
+				"description":"jīn"
 		},
 		{
 			"term":"菜",
-				"description":"test"
+				"description":"cài"
 		},
 		{
 			"term":"衣服",
@@ -1438,6 +1438,10 @@
 		{
 			"term":"书店",
 				"description":"shūdiàn"
+		},
+		{
+			"term":"刺",
+				"description":"cì"
 		},
 		{
 			"term":"test",
