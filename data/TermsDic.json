@@ -320,11 +320,6 @@
     },
 
 	{
-	    "term":"爬虫",
-        "description":"páchóng"
-    },
-
-	{
 	    "term":"抓到",
         "description":"zhuādào"
     },
@@ -746,7 +741,7 @@
 
 	{
 	    "term":"可爱",
-        "description":"kěài"
+        "description":"kě ài"
     },
 
 	{
@@ -985,11 +980,6 @@
     },
 
     {
-	    "term":"蚂蚁",
-        "description":"mǎyǐ"
-    },
-
-    {
 	    "term":"蝙蝠",
         "description":"biānfú"
     },
@@ -1052,11 +1042,6 @@
     {
 	    "term":"鸵鸟",
         "description":"tuóniǎo"
-    },
-
-    {
-	    "term":"兔子",
-        "description":"tùzi"
     },
 
     {
@@ -1173,91 +1158,85 @@
 	    "term":"聊天",
         "description":"liáotiān"
     },
+	{
+		"term":"打开",
+		"description":"dǎkāi"
+	},
 
-		{
-			"term":"打开",
-				"description":"dǎkāi"
-		},
+	{
+		"term":"打败",
+		"description":"dǎbài"
+	},
 
-		{
-			"term":"打败",
-				"description":"dǎbài"
-		},
+	{
+		"term":"跑走",
+		"description":"pǎozǒu"
+	},
 
-		{
-			"term":"跑走",
-				"description":"pǎozǒu"
-		},
+	{
+		"term":"腿",
+		"description":"tuǐ"
+	},
 
-		{
-			"term":"腿",
-				"description":"tuǐ"
-		},
+	{
+		"term":"目的地",
+		"description":"mùdi de"
+	},
 
-		{
-			"term":"目的地",
-				"description":"mùdi de"
-		},
+	{
+		"term":"指引",
+		"description":"zhǐyǐn"
+	},
 
-		{
-			"term":"指引",
-				"description":"zhǐyǐn"
-		},
+	{
+		"term":"帐篷",
+		"description":"zhàngpéng"
+	},
 
-		{
-			"term":"帐篷",
-				"description":"zhàngpéng"
-		},
+	{
+		"term":"勇敢",
+		"description":"yǒnggǎn"
+	},
 
-		{
-			"term":"勇敢",
-				"description":"yǒnggǎn"
-		},
+	{
+		"term":"旅途",
+		"description":"lǚtú"
+	},
 
-		{
-			"term":"旅途",
-				"description":"lǚtú"
-		},
+	{
+		"term":"玫瑰花",
+		"description":"méiguīhuā"
+	},
 
-		{
-			"term":"玫瑰花",
-				"description":"méiguīhuā"
-		},
+	{
+		"term":"船",
+		"description":"chuán"
+	},
 
-		{
-			"term":"船",
-				"description":"chuán"
-		},
+	{
+		"term":"指南针",
+		"description":"zhǐnánzhēn"
+	},
 
-		{
-			"term":"指南针",
-				"description":"zhǐnánzhēn"
-		},
+	{
+		"term":"四合院",
+		"description":"sìhéyuàn"
+	},
 
-		{
-			"term":"四合院",
-				"description":"sìhéyuàn"
-		},
+	{
+		"term":"队长",
+		"description":"duìzhǎng"
+	},
 
-		{
-			"term":"郑和",
-				"description":"zhènghé"
-		},
+	{
+		"term":"墙",
+		"description":"qiáng"
+	},
 
-		{
-			"term":"队长",
-				"description":"duìzhǎng"
-		},
-
-		{
-			"term":"墙",
-				"description":"qiáng"
-		},
-
-		{
-			"term":"钥匙",
-				"description":"yàoshi"
-		},
+	{
+		"term":"钥匙",
+		"description":"yàoshi"
+	},
 
 		{
 			"term":"兄弟",
