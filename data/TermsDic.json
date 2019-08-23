@@ -1487,12 +1487,44 @@
 		"description":"lánsè"
 },
 {
-"term":"test",
-	"description":"tuǐ"
+"term":"糖果",
+	"description":"tángguǒ"
 },
 {
-"term":"test",
-	"description":"tuǐ"
+"term":"蜂蜜",
+	"description":"fēngmì"
+},
+{
+"term":"真菌",
+	"description":"zhēnjūn"
+},
+{
+"term":"草",
+	"description":"cǎo"
+},
+{
+"term":"叶子",
+	"description":"yèzi"
+},
+{
+"term":"鱼",
+	"description":"yú"
+},
+{
+"term":"老鼠",
+	"description":"lǎoshǔ"
+},
+{
+"term":"挑衅",
+	"description":"tiāoxìn"
+},
+{
+"term":"虫子",
+	"description":"chóngzi"
+},
+{
+"term":"肉",
+	"description":"ròu"
 },
 		{
 			"term":"龙之骨",
