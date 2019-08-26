@@ -1,8 +1,0 @@
-{
-	"Map_id" : "39",
-{	"Pathing" : [
-		["00:00:00", Transfer, 17,11],
-		["00:00:02", Menu On, undefined,undefined],
-		["00:00:22", Menu On, undefined,undefined]
-	]
-}
