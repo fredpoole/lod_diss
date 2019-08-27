@@ -5263,7 +5263,7 @@ Game_Troop.prototype.setup = function(troopId) {
             this._enemies.push(enemy);
         }
     }, this);
-    this.makeUniqueNames();
+//    this.makeUniqueNames();
 };
 
 Game_Troop.prototype.makeUniqueNames = function() {
@@ -10411,7 +10411,7 @@ Game_Interpreter.prototype.command334 = function() {
 Game_Interpreter.prototype.command335 = function() {
     this.iterateEnemyIndex(this._params[0], function(enemy) {
         enemy.appear();
-        $gameTroop.makeUniqueNames();
+//        $gameTroop.makeUniqueNames();
     }.bind(this));
     return true;
 };
@@ -10420,7 +10420,7 @@ Game_Interpreter.prototype.command335 = function() {
 Game_Interpreter.prototype.command336 = function() {
     this.iterateEnemyIndex(this._params[0], function(enemy) {
         enemy.transform(this._params[1]);
-        $gameTroop.makeUniqueNames();
+//        $gameTroop.makeUniqueNames();
     }.bind(this));
     return true;
 };
